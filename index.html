@@ -3,296 +3,1822 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Setser Group | Leadership, Teams, and Productive Organizations</title>
+  <title>Setser Group - Leadership, Teams and Productive Organizations</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root{--brand:#103232;--brand-dark:#091f1f;--accent:#c6a676;--bg:#f5efe6;--surface:#fffdf9;--border:rgba(16,50,50,.12);--text:#173333;--muted:rgba(23,51,51,.72);--light:rgba(255,255,255,.78);--shadow:0 24px 60px rgba(9,29,29,.16);--max:1180px}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:"Plus Jakarta Sans",sans-serif;background:radial-gradient(circle at top left,rgba(198,166,118,.2),transparent 26%),radial-gradient(circle at top right,rgba(16,50,50,.08),transparent 28%),var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    img{display:block;max-width:100%}
-    a{text-decoration:none;color:inherit}
-    button{font:inherit}
-    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
-    .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
-    .tag,.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-    .tag::before,.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:999px}
-    .tag{color:var(--brand)}.eyebrow{color:rgba(255,255,255,.72)}
-    .nav{position:sticky;top:0;z-index:20;background:rgba(245,239,230,.88);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.25s ease}
-    .nav.scrolled{border-color:rgba(16,50,50,.08);box-shadow:0 12px 30px rgba(16,50,50,.08)}
-    .nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{width:50px;height:50px;border-radius:18px;object-fit:cover;background:var(--brand);box-shadow:0 14px 28px rgba(16,50,50,.18)}
-    .brand-copy{display:flex;flex-direction:column}
-    .brand-kicker{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(23,51,51,.58)}
-    .brand-name{font-family:"Sora",sans-serif;font-size:18px;font-weight:700;letter-spacing:-.03em;color:var(--brand)}
-    .nav-links{display:flex;align-items:center;gap:22px}
-    .nav-links a{font-size:14px;font-weight:600;color:rgba(23,51,51,.8)}
-    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:999px;font-size:14px;font-weight:700;transition:.2s ease}
-    .nav-cta{background:rgba(255,255,255,.86);border:1px solid rgba(16,50,50,.14);color:var(--brand)}
-    .nav-cta:hover,.btn:hover{transform:translateY(-2px)}
-    .hero{padding:40px 0 22px}
-    .hero-shell{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(300px,.86fr);gap:28px;padding:40px;border-radius:34px;background:radial-gradient(circle at 82% 18%,rgba(198,166,118,.28),transparent 26%),linear-gradient(135deg,rgba(16,50,50,.98),rgba(9,31,31,.94));box-shadow:var(--shadow)}
-    .hero h1{margin-top:22px;font-family:"Sora",sans-serif;font-size:clamp(42px,8vw,88px);line-height:.97;letter-spacing:-.06em;color:#fff}
-    .hero-word{display:block;min-height:1.18em;color:#d7b67e}
-    .cursor{display:inline-block;margin-left:2px;animation:blink .8s linear infinite}
-    @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-    .hero p{margin-top:24px;max-width:700px;font-size:18px;line-height:1.85;color:var(--light)}
-    .status{margin-top:18px;display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.84)}
-    .status::before{content:"";width:10px;height:10px;border-radius:50%;background:#d7b67e;box-shadow:0 0 0 6px rgba(215,182,126,.16)}
-    .actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px}
-    .btn-primary{background:#fff;color:var(--brand)}
-    .btn-secondary{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);color:#fff}
-    .hero-side{display:grid;gap:14px}
-    .panel,.note,.card,.aside,.faq-item,.footer-box{border:1px solid var(--border);border-radius:28px;background:rgba(255,253,249,.86);box-shadow:0 12px 28px rgba(16,50,50,.06)}
-    .panel,.note{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);backdrop-filter:blur(10px);color:#fff}
-    .panel,.note,.card,.aside,.focus,.footer-box{padding:26px}
-    .panel-kicker{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.52)}
-    .panel h2{margin-top:12px;font-family:"Sora",sans-serif;font-size:28px;line-height:1.08;letter-spacing:-.03em}
-    .panel p,.note{margin-top:12px;font-size:15px;line-height:1.75;color:rgba(255,255,255,.78)}
-    .panel ul{margin-top:18px;display:grid;gap:12px;list-style:none}
-    .panel li{padding:12px 14px;border-radius:18px;background:rgba(255,255,255,.06);font-size:14px;line-height:1.6;color:rgba(255,255,255,.82)}
-    .note strong,.quote strong{color:#fff}
-    section{padding:80px 0}
-    .head{display:grid;gap:16px;margin-bottom:30px}
-    .head h2,.card h3,.aside h3,.focus h3,.footer-title{font-family:"Sora",sans-serif;line-height:1.06;letter-spacing:-.04em}
-    .head h2{font-size:clamp(30px,4vw,54px)}
-    .head p,.card p,.aside p,.focus p,.faq-answer,.footer-copy,.footer-note{font-size:16px;line-height:1.8;color:var(--muted)}
-    .services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-    .service{position:relative;overflow:hidden;min-height:410px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;border-radius:28px;background:var(--brand);box-shadow:var(--shadow);isolation:isolate}
-    .service::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,16,16,.06),rgba(8,24,24,.92)),var(--img) center/cover no-repeat;z-index:-2;transition:transform .4s ease}
-    .service::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(16,50,50,.36) 54%,rgba(9,31,31,.96) 100%);z-index:-1}
-    .service:hover::before{transform:scale(1.06)}
-    .service-kicker{display:inline-flex;align-self:flex-start;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.14);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.88)}
-    .service h3{margin-top:16px;font-size:28px;color:#fff}
-    .service p{margin-top:12px;font-size:15px;line-height:1.72;color:rgba(255,255,255,.8)}
-    .service .soon{margin-top:16px;font-size:13px;font-weight:700;color:#d7b67e}
-    .approach{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(280px,.86fr);gap:20px}
-    .stack{display:grid;gap:18px}
-    .count{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-    .card h3,.aside h3,.focus h3{margin-top:18px;font-size:30px;color:var(--brand)}
-    .aside{background:radial-gradient(circle at top right,rgba(198,166,118,.18),transparent 30%),linear-gradient(180deg,rgba(220,233,229,.9),rgba(255,253,249,.96))}
-    .aside ul{margin-top:18px;display:grid;gap:12px;list-style:none}
-    .aside li{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.76);font-size:14px;font-weight:600;line-height:1.6;color:var(--brand)}
-    .focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-    .chip,.footer-chip{display:inline-flex;align-items:center;padding:12px 16px;border-radius:999px;font-size:14px;font-weight:700}
-    .chip{background:rgba(16,50,50,.08);color:var(--brand)}
-    .quote{margin-top:22px;padding:18px 20px;border-radius:22px;background:var(--brand);font-size:15px;line-height:1.75;color:rgba(255,255,255,.84)}
-    .faq-list{display:grid;gap:14px}
-    .faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;border:none;background:transparent;text-align:left;cursor:pointer;color:var(--brand)}
-    .faq-btn span:first-child{font-size:18px;font-weight:700;line-height:1.45}
-    .icon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(16,50,50,.08);font-size:18px;font-weight:700;transition:.2s ease}
-    .faq-item.open .icon{transform:rotate(45deg);background:rgba(16,50,50,.14)}
-    .faq-wrap{height:0;overflow:hidden;transition:height .28s ease}
-    .faq-answer{padding:0 24px 24px}
-    footer{padding:0 0 40px}
-    .footer-box{background:radial-gradient(circle at top right,rgba(198,166,118,.18),transparent 26%),linear-gradient(135deg,rgba(16,50,50,.98),rgba(9,31,31,.94));border-color:rgba(255,255,255,.08);box-shadow:var(--shadow)}
-    .footer-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
-    .footer-title{margin-top:18px;font-size:clamp(30px,4vw,52px);color:#fff}
-    .footer-copy,.footer-note{margin-top:14px;color:rgba(255,255,255,.74);max-width:560px}
-    .footer-meta{display:grid;gap:14px}
-    .footer-chip{width:fit-content;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.84)}
-    .footer-bottom{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.56)}
-    [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-    [data-reveal].show{opacity:1;transform:none}
-    @media (max-width:1080px){.hero-shell,.approach,.focus-grid,.footer-grid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:760px){.nav-links{display:none}.hero-shell{padding:24px;border-radius:28px}.services{grid-template-columns:1fr}.service{min-height:360px}.faq-btn{padding:20px}.faq-answer{padding:0 20px 20px}}
-    @media (max-width:560px){.wrap{width:min(var(--max),calc(100% - 28px))}.hero h1{font-size:42px}.actions{flex-direction:column}.btn,.nav-cta{width:100%}section{padding:70px 0}.card h3,.aside h3,.focus h3,.service h3{font-size:24px}}
-    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}[data-reveal]{opacity:1;transform:none}}
+    /* ═══════════════════════════════════════════════════════════
+      DESIGN TOKENS - single source of truth for both pages
+    ═══════════════════════════════════════════════════════════ */
+    :root {
+      /* Brand colours */
+      --c-brand:       #103232;
+      --c-brand-dk:    #0b2525;
+      --c-brand-lt:    #dce9e5;
+      --c-accent:      #c5a574;
+      --c-accent-dk:   #9d7b4c;
+      --c-accent-lt:   #f3ecdf;
+      /* Neutrals */
+      --c-dark:        #102727;
+      --c-navy:        #183636;
+      --c-text:        #2d4646;
+      --c-muted:       #617070;
+      --c-subtle:      #8f9a9a;
+      --c-bg:          #ffffff;
+      --c-bg-alt:      #f3f6f4;
+      --c-bg-tinted:   #e7efeb;
+      --c-border:      #d9e2dd;
+      --c-border-lt:   #e9edeb;
+      /* Typography */
+      --font:          'Plus Jakarta Sans', sans-serif;
+      --font-display:  'Sora', sans-serif;
+      /* Layout */
+      --nav-h:         72px;
+      --px:            60px;
+      --max-w:         1280px;
+      --section-py:    100px;
+      /* Radii */
+      --r-sm:          4px;
+      --r-md:          8px;
+      --r-lg:          16px;
+      --r-xl:          24px;
+      --r-pill:        50px;
+      /* Shadows */
+      --sh-card:       0 4px 24px rgba(16,50,50,.08);
+      --sh-card-hov:   0 12px 40px rgba(16,50,50,.16);
+      --sh-nav:        0 1px 12px rgba(16,50,50,.06);
+      --sh-btn:        0 4px 16px rgba(16,50,50,.32);
+      /* Transitions */
+      --t:             0.2s ease;
+      --t-med:         0.35s ease;
+      --t-slow:        0.6s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--c-bg); color: var(--c-text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── GLOBAL HEADING CONSISTENCY ───────────────────────── */
+    /* All section H2s share the same display font, weight, color, and size scale */
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.2vw, 44px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--c-navy);
+    }
+    .section-heading-light { color: #ffffff; }
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--c-brand); margin-bottom: 16px;
+    }
+    .section-eyebrow::before { content: ''; display: block; width: 20px; height: 2px; background: currentColor; flex-shrink: 0; }
+    .section-eyebrow-light { color: rgba(255,255,255,.6); }
+
+    /* ── SCROLL PROGRESS BAR ───────────────────────────────── */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; z-index: 1001;
+      height: 3px; width: 0%; background: var(--c-accent);
+      transition: width .05s linear; pointer-events: none;
+    }
+
+    /* ── SCROLL REVEAL ─────────────────────────────────────── */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity var(--t-slow), transform var(--t-slow);
+    }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: .1s; }
+    .reveal-d2 { transition-delay: .18s; }
+    .reveal-d3 { transition-delay: .26s; }
+    .reveal-d4 { transition-delay: .34s; }
+
+    /* ── UNIFIED BUTTON SYSTEM ─────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-family: var(--font); font-size: 15px; font-weight: 600; line-height: 1;
+      border-radius: var(--r-md); padding: 10px 24px;
+      border: 1.5px solid transparent; cursor: pointer; text-decoration: none;
+      white-space: nowrap;
+      transition: background var(--t), color var(--t), border-color var(--t),
+                  box-shadow var(--t), transform var(--t);
+    }
+    .btn:hover  { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    /* Variants */
+    .btn-brand  { background: var(--c-brand); color: #fff; border-color: var(--c-brand); }
+    .btn-brand:hover  { background: var(--c-brand-dk); border-color: var(--c-brand-dk); box-shadow: var(--sh-btn); }
+    .btn-ghost  { background: transparent; color: var(--c-text); border-color: var(--c-border); }
+    .btn-ghost:hover  { border-color: var(--c-text); background: #f5f5f5; }
+    .btn-ghost-lt { background: transparent; color: rgba(255,255,255,.8); border-color: rgba(255,255,255,.4); }
+    .btn-ghost-lt:hover { background: rgba(255,255,255,.1); border-color: #fff; color: #fff; }
+    .btn-light  { background: #fff; color: var(--c-brand); border-color: #fff; }
+    .btn-light:hover  { background: var(--c-brand-lt); }
+    .btn-outline { background: transparent; color: var(--c-brand); border-color: var(--c-brand); }
+    .btn-outline:hover { background: var(--c-brand); color: #fff; }
+
+    /* Sizes */
+    .btn-sm { font-size: 13px; padding: 8px 18px; }
+    .btn-lg { font-size: 16px; padding: 14px 32px; }
+
+    /* ── NAVBAR ────────────────────────────────────────────── */
+    .navbar {
+      width: 100%; height: var(--nav-h);
+      background: transparent;
+      display: flex; align-items: center; padding: 0 var(--px);
+      position: fixed; top: 0; z-index: 200;
+      border-bottom: 1px solid transparent;
+      transition: background var(--t-med), border-color var(--t-med), box-shadow var(--t-med);
+    }
+    .navbar.scrolled {
+      background: var(--c-bg);
+      border-bottom-color: var(--c-border);
+      box-shadow: var(--sh-nav);
+    }
+    /* Logo */
+    .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+    .nav-logo-img { height: 38px; width: auto; max-width: 180px; object-fit: contain; display: block; }
+    .nav-logo-fallback { display: none; align-items: center; gap: 10px; }
+    .nav-logo-mark { width: 34px; height: 34px; background: var(--c-brand); border-radius: var(--r-md); display: grid; place-items: center; font-weight: 700; font-size: 15px; color: #fff; flex-shrink: 0; }
+    .nav-logo-name { font-size: 17px; font-weight: 600; color: var(--c-text); line-height: 1; letter-spacing: -.01em; }
+    .navbar.scrolled .nav-logo-name { color: var(--c-text); }
+    .nav-logo-name-light { color: #fff; }
+    .navbar.scrolled .nav-logo-name-light { color: var(--c-text); }
+    /* Nav links */
+    .nav-spacer { flex: 1; }
+    .nav-links { display: none !important; }
+    /* Nav buttons */
+    .nav-buttons { display: flex; align-items: center; gap: 12px; }
+    .nav-auth-guest { display: flex; align-items: center; gap: 12px; }
+    .nav-auth-user { position: relative; display: none; }
+    body.is-authenticated .nav-auth-guest { display: none; }
+    body.is-authenticated .nav-auth-user { display: block; }
+    .profile-toggle {
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      color: var(--c-text); background: #fff;
+      border: 1.5px solid var(--c-border); border-radius: 999px;
+      padding: 6px 12px 6px 6px; cursor: pointer; line-height: 1;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .profile-avatar {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--c-brand); color: #fff; font-size: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; flex-shrink: 0;
+    }
+    .profile-label { white-space: nowrap; }
+    .profile-caret { font-size: 12px; color: var(--c-muted); }
+    .profile-menu {
+      position: absolute; right: 0; top: calc(100% + 8px);
+      min-width: 140px; background: #fff;
+      border: 1px solid var(--c-border); border-radius: 12px;
+      box-shadow: var(--sh-card); padding: 6px; z-index: 220;
+    }
+    .profile-menu-item {
+      width: 100%; border: none; background: transparent;
+      text-align: left; padding: 8px 10px; border-radius: 8px;
+      font-family: var(--font); font-size: 14px; color: var(--c-text);
+      cursor: pointer;
+    }
+    .profile-menu-item:hover { background: var(--c-bg-tinted); }
+    .btn-login {
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      color: var(--c-text); background: transparent;
+      border: 1.5px solid var(--c-border); border-radius: var(--r-md);
+      padding: 9px 22px; cursor: pointer; line-height: 1;
+      transition: border-color var(--t), background var(--t);
+    }
+    .btn-login:hover { border-color: var(--c-text); background: #f5f5f5; }
+    .btn-signup {
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      color: #fff; background: var(--c-brand); border: none;
+      border-radius: var(--r-md); padding: 10px 22px; cursor: pointer;
+      line-height: 1; text-decoration: none;
+      display: inline-flex; align-items: center;
+      transition: background var(--t), transform var(--t), box-shadow var(--t);
+    }
+    .btn-signup:hover { background: var(--c-brand-dk); box-shadow: var(--sh-btn); transform: translateY(-1px); }
+    .btn-signup:active { transform: translateY(0); }
+    /* Hamburger */
+    .ham { display: none !important; background: none; border: none; cursor: pointer; padding: 7px; color: var(--c-text); border-radius: var(--r-md); }
+    .ham svg { width: 22px; height: 22px; display: block; }
+    /* Mobile menu overlay */
+    .mob { display: none; position: fixed; inset: 0; z-index: 300; background: var(--c-bg); flex-direction: column; overflow-y: auto; }
+    .mob.open { display: flex; }
+    .mob-head { height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid var(--c-border-lt); flex-shrink: 0; }
+    .mob-close { background: none; border: none; cursor: pointer; padding: 7px; color: var(--c-text); border-radius: var(--r-md); }
+    .mob-close svg { width: 22px; height: 22px; display: block; }
+    .mob-body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 3px; }
+    .mob-link { display: block; padding: 13px 14px; border-radius: var(--r-md); font-size: 16px; font-weight: 500; color: var(--c-text); transition: background .14s; }
+    .mob-link:hover { background: var(--c-bg-tinted); }
+    .mob-foot { padding: 16px; border-top: 1px solid var(--c-border-lt); display: flex; flex-direction: column; gap: 8px; }
+    .mob-section-label { font-size: 11px; font-weight: 600; color: var(--c-subtle); text-transform: uppercase; letter-spacing: .08em; padding: 8px 14px 4px; }
+
+    /* ── HERO ──────────────────────────────────────────────── */
+    .hero {
+      background: var(--c-bg); padding: calc(var(--nav-h) + 80px) var(--px) 64px;
+      position: relative; overflow: hidden;
+    }
+    .hero-headline {
+      font-family: var(--font-display);
+      font-weight: 700; font-size: 96px; line-height: 1.08;
+      letter-spacing: -.025em; color: var(--c-text); position: relative; z-index: 1;
+    }
+    .hero-typing-line { display: block; color: var(--c-brand); position: relative; height: 1.45em; margin-top: 4px; }
+    .hero-typing-text { display: inline; }
+    .hero-cursor { display: inline; font-weight: 400; animation: heroBlink .7s infinite; }
+    @keyframes heroBlink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
+
+    /* ── SERVICES ──────────────────────────────────────────── */
+    .services-section { background: var(--c-bg); padding: 0 var(--px) 80px; }
+    .services-label { font-size: 22px; font-weight: 500; color: var(--c-text); margin-bottom: 24px; }
+    .services-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; align-items: start; }
+    .service-card {
+      background: var(--c-bg); border-radius: var(--r-lg); padding: 20px;
+      display: flex; flex-direction: column; box-shadow: var(--sh-card);
+      overflow: hidden; cursor: pointer; aspect-ratio: 7/8;
+      transition: box-shadow var(--t-slow), transform var(--t-med);
+      text-decoration: none; color: inherit;
+    }
+    .service-card:hover { box-shadow: var(--sh-card-hov); transform: translateY(-4px); background: var(--c-brand); }
+    .service-card:hover .card-title { color: #fff; }
+    .service-card:hover .card-badge { background: #fff; color: var(--c-brand); }
+    .card-title { font-size: 16px; font-weight: 500; color: var(--c-muted); line-height: 1.45; margin-bottom: 16px; flex-shrink: 0; }
+    .card-image-area {
+      flex: 1; border-radius: 12px; overflow: hidden; margin-bottom: 20px;
+      background-size: 100%; background-position: center; background-repeat: no-repeat;
+      transition: background-size .6s cubic-bezier(.25,.46,.45,.94); min-height: 0;
+    }
+    .service-card:hover .card-image-area { background-size: 110%; }
+    .img-coaching { background-image: url('images/sg-service-coaching.png'); }
+    .img-learning  { background-image: url('images/sg-service-learning.png'); }
+    .img-cert      { background-image: url('images/sg-service-cert.png'); }
+    .img-prep      { background-image: url('images/sg-service-prep.png'); }
+    .card-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--c-brand); color: #fff;
+      font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase;
+      padding: 8px 16px; border-radius: var(--r-pill); align-self: flex-start; flex-shrink: 0;
+    }
+
+    /* ── HOW IT WORKS ──────────────────────────────────────── */
+    .hiw-section { width: 100%; position: relative; background: #102727; }
+    .hiw-section::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(16,50,50,.35) 0%, transparent 70%);
+      z-index: 0;
+    }
+    .hiw-scroll-shell { width: 100%; height: 300vh; }
+    .hiw-sticky-stage { position: sticky; top: var(--nav-h); height: calc(100vh - var(--nav-h)); overflow: hidden; }
+    .hiw-inner { position: relative; z-index: 1; height: 100%; width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 56px var(--px) 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .hiw-tag { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: var(--r-pill); padding: 10px 15px; margin-bottom: 28px; }
+    .hiw-tag-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--c-brand); flex-shrink: 0; }
+    .hiw-tag-text { font-family: var(--font); font-size: 11px; font-weight: 700; color: var(--c-text); text-transform: uppercase; letter-spacing: .08em; line-height: 1; }
+    .hiw-title { font-family: var(--font-display); font-size: clamp(28px,3.2vw,44px); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-bottom: 18px; }
+    .hiw-stage-row { width: 100%; max-width: 1100px; position: relative; display: flex; align-items: flex-end; justify-content: center; margin-top: auto; }
+    .hiw-desktop-wrap { display: block; position: relative; width: min(760px,78vw); max-width: 100%; margin: 0; overflow: visible; flex: 0 1 auto; }
+    .hiw-desktop-img { width: 100%; max-width: 100%; height: auto; display: block; border-radius: var(--r-lg); opacity: 0; transition: opacity .6s ease; }
+    .hiw-desktop-img:first-child { position: relative; }
+    .hiw-desktop-img:not(:first-child) { position: absolute; top: 0; left: 0; }
+    .hiw-desktop-img.is-visible { opacity: 1; }
+    .hiw-story-copy { position: absolute; right: 0; bottom: clamp(230px,30vh,320px); width: min(280px,26vw); min-height: 130px; text-align: left; pointer-events: none; margin: 0; }
+    .hiw-story-step { position: absolute; inset: 0; font-size: clamp(16px,1.25vw,18px); font-weight: 400; line-height: 1.45; color: #fefefe; opacity: 0; transform: translateY(16px); transition: opacity .45s ease, transform .45s ease; }
+    .hiw-story-step.is-active { opacity: 1; transform: translateY(0); }
+    .hiw-mobile-wrap { display: none; width: 85%; max-width: 360px; margin: 0 auto; }
+    .hiw-mobile-img { width: 100%; height: auto; display: block; border-radius: 24px 24px 0 0; }
+
+    /* ── RESULTS ───────────────────────────────────────────── */
+
+    /* ── PARTNERS ──────────────────────────────────────────── */
+    .partners-section { background: var(--c-bg-tinted); padding: 0; overflow: hidden; }
+    .partners-inner { max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
+    .partners-photo-col { position: relative; overflow: hidden; min-height: 420px; }
+    .partners-photo-wrap { width: 100%; height: 100%; background: linear-gradient(135deg,#c7d9f5 0%,#a0bde0 100%); }
+    .partners-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .partners-content-col { padding: 80px 72px; display: flex; flex-direction: column; justify-content: center; background: var(--c-bg-tinted); }
+    .partners-eyebrow { font-size: 12px; font-weight: 700; color: var(--c-brand); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+    .partners-title { font-family: var(--font-display); font-size: clamp(28px,3.2vw,44px); font-weight: 700; color: var(--c-navy); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 24px; }
+    .partners-title em { font-style: italic; color: var(--c-brand); }
+    .partners-body { font-size: 16px; color: #4a5568; line-height: 1.8; margin-bottom: 36px; max-width: 480px; }
+    .partners-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase; color: #fff;
+      background: var(--c-brand); border: 2px solid var(--c-brand);
+      padding: 14px 36px; border-radius: var(--r-md); width: fit-content;
+      cursor: pointer; text-decoration: none; margin-bottom: 20px;
+      transition: background var(--t), color var(--t), transform var(--t);
+    }
+    .partners-btn:hover { background: transparent; color: var(--c-brand); transform: translateY(-1px); }
+    .partners-footnote { font-size: 13px; color: var(--c-subtle); font-style: italic; }
+    .partners-footnote a { color: var(--c-brand); text-decoration: underline; transition: color var(--t); }
+    .partners-footnote a:hover { color: var(--c-brand-dk); }
+
+    /* ── TESTIMONIALS ──────────────────────────────────────── */
+    .testimonials-section {
+      background: linear-gradient(135deg, #1e5959 0%, #154444 40%, #103232 100%);
+      padding: var(--section-py) var(--px); display: flex; align-items: center; gap: 40px;
+      position: relative; overflow: hidden;
+    }
+    .testimonials-section::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 50%; background: rgba(255,255,255,.05); pointer-events: none; }
+    .testi-nav { background: none; border: none; cursor: pointer; flex-shrink: 0; color: rgba(255,255,255,.4); transition: color var(--t); padding: 8px; position: relative; z-index: 1; }
+    .testi-nav:hover { color: rgba(255,255,255,.85); }
+    .testi-nav svg { width: 36px; height: 36px; display: block; }
+    .testi-content { flex: 1; text-align: center; position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+    .testi-title { font-family: var(--font-display); font-size: clamp(28px,3.2vw,44px); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 48px; letter-spacing: -.02em; }
+    .testi-title em { font-style: italic; color: var(--c-accent); }
+    .testi-track { position: relative; min-height: 140px; }
+    .testi-slide { display: none; }
+    .testi-slide.active { display: block; animation: testiFadeIn .4s ease; }
+    @keyframes testiFadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+    .testi-quote { font-size: clamp(15px,1.5vw,17px); color: rgba(255,255,255,.9); line-height: 1.85; margin-bottom: 28px; }
+    .testi-attr { font-size: 14px; color: rgba(255,255,255,.6); letter-spacing: .02em; }
+    .testi-cta {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase; color: #fff;
+      background: rgba(255,255,255,.12); border: 1.5px solid rgba(255,255,255,.3);
+      padding: 14px 36px; border-radius: var(--r-md); margin-top: 40px;
+      cursor: pointer; text-decoration: none;
+      transition: background var(--t), border-color var(--t), transform var(--t);
+    }
+    .testi-cta:hover { background: rgba(255,255,255,.2); border-color: rgba(255,255,255,.6); transform: translateY(-1px); }
+
+    /* ── NEWS ──────────────────────────────────────────────── */
+    .news-section { background: var(--c-bg-alt); padding: var(--section-py) 0; }
+    .news-section-header { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--px); text-align: center; margin-bottom: 52px; }
+    .news-title { font-family: var(--font-display); font-size: clamp(28px,3.2vw,44px); font-weight: 700; line-height: 1.15; color: var(--c-navy); letter-spacing: -.02em; }
+    .news-title span { display: block; }
+    .news-overflow-clip { width: 100%; overflow: hidden; }
+    .news-track-mask { padding: 4px 0 40px; }
+    .news-track { display: flex; gap: 20px; padding: 0 var(--px); width: max-content; animation: newsScrollLeft 48s linear infinite; will-change: transform; }
+    .news-track:hover { animation-play-state: paused; }
+    @keyframes newsScrollLeft { 0%{transform:translateX(0)} 100%{transform:translateX(-33.333%)} }
+    .news-card {
+      flex-shrink: 0; width: 360px; background: var(--c-bg); border-radius: 14px; overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,.06); cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease; display: flex; flex-direction: column;
+    }
+    .news-card:hover { transform: translateY(-6px); box-shadow: 0 10px 32px rgba(16,50,50,.1); }
+    .news-card-img { width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; background-color: #d9e4df; flex-shrink: 0; }
+    .nc-img-1 { background-image: url('images/sg-news-1.jpg'); }
+    .nc-img-2 { background-image: url('images/sg-news-2.jpg'); }
+    .nc-img-3 { background-image: url('images/sg-news-3.jpg'); }
+    .news-card-body { padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .news-card-title { font-size: 16px; font-weight: 600; color: var(--c-navy); line-height: 1.45; }
+    .news-card-excerpt { font-size: 13px; font-weight: 400; color: var(--c-muted); line-height: 1.65; flex: 1; }
+    .news-card-footer { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+    .news-read-more { font-size: 14px; font-weight: 500; color: var(--c-text); }
+    .news-arrow-btn { width: 30px; height: 30px; background: var(--c-accent); border-radius: var(--r-sm); display: grid; place-items: center; flex-shrink: 0; transition: background var(--t); }
+    .news-card:hover .news-arrow-btn { background: var(--c-accent-dk); }
+    .news-arrow-btn svg { width: 14px; height: 14px; color: #fff; }
+
+    /* ── PROMO ─────────────────────────────────────────────── */
+    .promo-shell { position: relative; height: auto; }
+    .promo-section { position: relative; width: 100%; aspect-ratio: 1460/800; max-height: none; overflow: hidden; display: flex; align-items: center; justify-content: flex-start; }
+    .promo-bg {
+      position: absolute; inset: 0; z-index: 1;
+      background-color: #102727;
+      /* ── PROMO BACKGROUND IMAGE ─────────────────────────────
+         Replace the URL below with your own image path.
+         Recommended: wide landscape, min 1920x1050px, mid-toned.
+         The overlay (next rule) darkens it to ~68% - any well-lit
+         photo will work. Remove the background-color line once
+         an image is supplied.
+         ──────────────────────────────────────────────────── */
+      background-image: url('images/sg-promo-bg.jpg');
+      background-size: cover; background-position: center;
+    }
+    .promo-bg::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(10,18,24,.72) 0%,rgba(16,50,50,.48) 60%,rgba(16,50,50,.32) 100%); z-index:1; }
+    .promo-content { position: relative; z-index: 3; padding: 60px 80px; max-width: 680px; }
+    .promo-title { font-family: var(--font-display); font-size: clamp(28px,3.2vw,44px); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-bottom: 32px; min-height: calc(1.15em * 2 + 0.5em); }
+    .promo-title-line { display: block; }
+    .promo-cursor { display: inline; font-weight: 400; animation: promoBlink .7s infinite; }
+    @keyframes promoBlink { 0%,50%{opacity:1} 51%,100%{opacity:0} }
+    .promo-features { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+    .promo-feature { display: flex; align-items: center; gap: 12px; }
+    .promo-check { width: 22px; height: 22px; background: rgba(255,255,255,.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .promo-check svg { width: 12px; height: 12px; color: #fff; }
+    .promo-feature span { font-size: 16px; font-weight: 500; color: #fff; line-height: 1.5; }
+    .promo-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font); font-size: 15px; font-weight: 700; letter-spacing: .02em;
+      color: var(--c-brand); background: #fff; border: none;
+      border-radius: var(--r-md); padding: 14px 32px;
+      cursor: pointer; text-decoration: none;
+      transition: background var(--t), transform var(--t), box-shadow var(--t);
+    }
+    .promo-btn:hover { background: var(--c-brand-lt); box-shadow: 0 4px 20px rgba(255,255,255,.3); transform: translateY(-2px); }
+    .promo-btn:active { transform: translateY(0); }
+
+    /* ── FAQ ───────────────────────────────────────────────── */
+    .faq-section { background: var(--c-bg); padding: 88px var(--px); }
+    .faq-inner { display: block; max-width: var(--max-w); margin: 0 auto; }
+    .faq-title { font-family: var(--font-display); font-size: clamp(28px,3.2vw,44px); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--c-navy); margin-bottom: 24px; }
+    .faq-item { border-bottom: 1px solid var(--c-border); overflow: hidden; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; padding: 24px 0; background: none; border: none; cursor: pointer;
+      text-align: left; font-family: var(--font); font-size: 17px; font-weight: 600;
+      color: var(--c-navy); line-height: 1.4; transition: color var(--t);
+    }
+    .faq-question:hover { color: var(--c-brand); }
+    .faq-icon { flex-shrink: 0; width: 32px; height: 32px; transition: transform .35s cubic-bezier(.4,0,.2,1); color: var(--c-subtle); }
+    .faq-item--open .faq-icon { transform: rotate(45deg); color: var(--c-brand); }
+    .faq-answer { height: 0; overflow: hidden; transition: height .38s cubic-bezier(.4,0,.2,1); }
+    .faq-answer-inner { padding: 0 0 24px; }
+    .faq-answer p { font-size: 16px; font-weight: 400; color: var(--c-muted); line-height: 1.7; }
+
+    /* ── FOOTER ────────────────────────────────────────────── */
+    .footer {
+      position: relative; background: #102727;
+      background-image: url('images/sg-footer-bg.jpg');
+      background-size: cover; background-position: center top;
+    }
+    .footer::before { content:''; position:absolute; inset:0; background:rgba(10,16,32,0.84); z-index:0; pointer-events:none; }
+    .footer-top {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 56px; max-width: var(--max-w); margin: 0 auto;
+      padding: 72px var(--px) 68px;
+    }
+    .footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+    .footer-logo-img { height: 140px; width: auto; object-fit: contain; margin-bottom: 28px; display: block; }
+    .footer-tagline { font-size: 13px; font-weight: 400; color: rgba(255,255,255,.5); line-height: 1.8; max-width: 380px; }
+    .footer-col { display: flex; flex-direction: column; position: relative; z-index: 1; }
+    .footer-col-heading { font-size: 13px; font-weight: 700; color: #fff; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 28px; }
+    .footer-links-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+    .footer-links-grid.footer-links-single { grid-template-columns: 1fr; gap: 14px; }
+    .footer-links-grid a { font-size: 14px; font-weight: 400; color: rgba(255,255,255,.6); transition: color var(--t); }
+    .footer-links-grid a:hover { color: #fff; }
+    .footer-contact-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+    .footer-contact-item { font-size: 14px; font-weight: 400; color: rgba(255,255,255,.6); line-height: 1.6; }
+    .footer-contact-item strong { color: rgba(255,255,255,.85); font-weight: 600; margin-right: 2px; }
+    .footer-contact-item a { color: var(--c-accent); transition: color var(--t); }
+    .footer-contact-item a:hover { color: #ffc840; }
+    .footer-address-indent { display: block; padding-left: 54px; }
+    .footer-socials { display: flex; align-items: center; gap: 14px; }
+    .footer-social-link { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.6); border-radius: var(--r-sm); transition: color var(--t), background var(--t); }
+    .footer-social-link:hover { color: #fff; background: rgba(255,255,255,.1); }
+    .footer-social-link svg { width: 18px; height: 18px; }
+    .footer-bottom { position: relative; z-index: 1; background: var(--c-brand); padding: 16px var(--px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .footer-copy { font-size: 13px; font-weight: 400; color: rgba(255,255,255,.85); }
+    .footer-credit { font-size: 13px; font-weight: 400; color: rgba(255,255,255,.65); }
+    .footer-credit a { color: rgba(255,255,255,.85); transition: color var(--t); }
+    .footer-credit a:hover { color: #fff; }
+
+    /* ── CHATBOT FLOAT ─────────────────────────────────────── */
+    .marketing-view { display: block; }
+    .agent-home { display: none; min-height: 100vh; background: #f5f8fd; padding: calc(var(--nav-h) + 28px) var(--px) 42px; }
+    body.is-authenticated .marketing-view,
+    body.is-authenticated #scrollProgress { display: none; }
+    body.is-authenticated .agent-home { display: block; }
+    .agent-shell { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0,1fr) 360px; gap: 24px; align-items: start; }
+    .agent-chat-panel {
+      background: #fff; border: 1px solid var(--c-border); border-radius: 18px;
+      box-shadow: 0 10px 36px rgba(16,50,50,.08); min-height: 72vh;
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .agent-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 22px 24px; border-bottom: 1px solid var(--c-border);
+    }
+    .agent-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--c-navy); }
+    .agent-subtitle { font-size: 14px; color: var(--c-muted); margin-top: 4px; }
+    .agent-logout { font-size: 13px; padding: 9px 16px; }
+    .agent-messages { flex: 1; background: #f4f7f5; padding: 24px; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; }
+    .agent-msg {
+      max-width: 78%; border-radius: 14px; padding: 12px 14px;
+      font-size: 14px; line-height: 1.45; box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    }
+    .agent-msg-assistant { background: #fff; border: 1px solid #e6edf5; color: #2f3f49; align-self: flex-start; }
+    .agent-msg-user { background: var(--c-brand); color: #fff; align-self: flex-end; }
+    .agent-compose { padding: 16px; border-top: 1px solid var(--c-border); display: flex; gap: 10px; background: #fff; }
+    .agent-input {
+      flex: 1; border: 1px solid var(--c-border); border-radius: 10px;
+      font-family: var(--font); font-size: 14px; padding: 12px 14px; color: var(--c-text);
+    }
+    .agent-input:focus,
+    .booking-input:focus { outline: none; border-color: #4d88ff; box-shadow: 0 0 0 3px rgba(77,136,255,.16); }
+    .agent-send { padding: 12px 18px; font-size: 13px; letter-spacing: .04em; }
+    .booking-panel {
+      background: #fff; border: 1px solid var(--c-border); border-radius: 18px;
+      box-shadow: 0 10px 36px rgba(16,50,50,.08); padding: 20px;
+      position: sticky; top: calc(var(--nav-h) + 16px);
+    }
+    .booking-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--c-navy); margin-bottom: 8px; }
+    .booking-subtitle { font-size: 13px; color: var(--c-muted); margin-bottom: 16px; line-height: 1.4; }
+    .booking-progress { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 16px; }
+    .booking-progress-step { height: 6px; border-radius: 999px; background: #dce6e1; }
+    .booking-progress-step.is-active { background: var(--c-brand); }
+    .booking-step { display: none; }
+    .booking-step.is-active { display: block; }
+    .booking-step-title { font-size: 14px; font-weight: 700; color: var(--c-navy); margin-bottom: 10px; }
+    .booking-input {
+      width: 100%; border: 1px solid var(--c-border); border-radius: 10px;
+      font-family: var(--font); font-size: 14px; padding: 11px 12px; color: var(--c-text); margin-bottom: 10px;
+    }
+    .booking-input-group { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .booking-nav { margin-top: 8px; display: flex; gap: 8px; }
+    .booking-nav button { flex: 1; font-size: 12px; }
+    .booking-hint { font-size: 12px; color: #d03939; min-height: 16px; margin-top: 2px; }
+    .booking-summary {
+      background: #f2f6f3; border: 1px solid #dbe4df; border-radius: 12px;
+      padding: 10px 12px; margin-bottom: 10px; font-size: 13px; color: #344654; line-height: 1.5;
+    }
+    .booking-success {
+      margin-top: 10px; border: 1px solid #c9ddd3; border-radius: 10px;
+      background: #eef7f2; color: #103232; padding: 8px 10px; font-size: 12px; display: none;
+    }
+    .booking-success.is-visible { display: block; }
+    .booking-upcoming { margin-top: 16px; border-top: 1px solid var(--c-border); padding-top: 14px; }
+    .booking-upcoming h4 { font-size: 13px; color: var(--c-navy); margin-bottom: 8px; }
+    .booking-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .booking-list li { font-size: 12px; color: var(--c-muted); background: #f5f8f6; border: 1px solid #dce6e1; border-radius: 8px; padding: 8px 10px; }
+
+    .auth-modal-backdrop {
+      position: fixed; inset: 0; z-index: 1200;
+      background: rgba(6, 21, 34, 0.62); backdrop-filter: blur(3px);
+      display: none; align-items: center; justify-content: center; padding: 16px;
+    }
+    .auth-modal-backdrop.is-open { display: flex; }
+    .auth-modal {
+      width: min(560px, 100%);
+      background: #fff;
+      border-radius: 24px;
+      border: 1px solid #dce6e1;
+      box-shadow: 0 26px 70px rgba(0, 33, 55, 0.32);
+      padding: 30px 30px 28px;
+      animation: authModalIn 0.2s ease;
+    }
+    @keyframes authModalIn {
+      from { opacity: 0; transform: translateY(10px) scale(0.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .auth-modal-brand {
+      display: flex; justify-content: center;
+      margin-bottom: 22px;
+    }
+    .auth-modal-brand img {
+      height: 34px; width: auto; object-fit: contain;
+    }
+    .auth-modal-head {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      margin-bottom: 8px; gap: 16px;
+    }
+    .auth-modal-title {
+      font-family: var(--font-display); font-size: clamp(30px, 3vw, 36px);
+      font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--c-navy);
+    }
+    .auth-modal-close {
+      width: 36px; height: 36px; flex-shrink: 0;
+      border-radius: 10px; border: 1px solid var(--c-border);
+      background: #fff; color: var(--c-muted); cursor: pointer; display: grid; place-items: center;
+      transition: background var(--t), border-color var(--t), color var(--t);
+    }
+    .auth-modal-close:hover { background: #f3f6f4; border-color: #d9e2dd; color: var(--c-text); }
+    .auth-modal-copy {
+      font-size: 14px; color: var(--c-muted); line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    .auth-socials {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .auth-social {
+      width: 100%;
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      border: 1px solid var(--c-border); background: #fff;
+      border-radius: 12px; padding: 12px 14px;
+      font-family: var(--font); font-size: 14px; font-weight: 600; color: var(--c-text);
+      cursor: pointer; transition: background var(--t), border-color var(--t), transform var(--t);
+    }
+    .auth-social:hover { background: #f3f6f4; border-color: #d9e2dd; transform: translateY(-1px); }
+    .auth-social:active { transform: translateY(0); }
+    .auth-social-icon {
+      width: 18px; height: 18px; object-fit: contain; flex-shrink: 0;
+    }
+    .auth-divider {
+      display: flex; align-items: center; gap: 12px;
+      color: var(--c-subtle); margin: 4px 0 16px; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .auth-divider::before,
+    .auth-divider::after { content: ''; flex: 1; height: 1px; background: var(--c-border); }
+    .auth-form { display: flex; flex-direction: column; gap: 11px; }
+    .auth-label {
+      font-size: 12px; color: var(--c-text); font-weight: 700; letter-spacing: 0.02em;
+    }
+    .auth-input {
+      width: 100%;
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      background: #fff;
+      font-family: var(--font); font-size: 14px; color: var(--c-text);
+      padding: 12px 13px;
+      transition: border-color var(--t), box-shadow var(--t);
+    }
+    .auth-input::placeholder { color: var(--c-subtle); }
+    .auth-input:focus {
+      outline: none; border-color: var(--c-brand);
+      box-shadow: 0 0 0 3px rgba(16, 50, 50, 0.14);
+    }
+    .auth-meta {
+      margin-top: 2px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      flex-wrap: wrap;
+    }
+    .auth-check {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--c-muted); cursor: pointer;
+    }
+    .auth-check input {
+      width: 16px; height: 16px;
+      accent-color: var(--c-brand);
+    }
+    .auth-link {
+      font-size: 13px; font-weight: 600; color: var(--c-brand);
+    }
+    .auth-link:hover { text-decoration: underline; }
+    .auth-submit {
+      width: 100%;
+      margin-top: 8px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-size: 16px;
+    }
+    .auth-foot-copy {
+      margin-top: 18px; text-align: center;
+      font-size: 14px; color: var(--c-muted);
+    }
+    .auth-foot-copy a { color: var(--c-brand); font-weight: 600; }
+    .auth-foot-copy a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ────────────────────────────────────────── */
+    @media (max-width: 1200px) {
+      .hero-headline { font-size: 76px; }
+      .promo-title { font-size: 42px; line-height: 50px; min-height: 100px; }
+      .promo-content { padding: 50px 60px; max-width: 600px; }
+    }
+    @media (max-width: 960px) {
+      :root { --px: 32px; }
+      .navbar { padding: 0 32px; }
+      .nav-links { display: none; }
+      .hero { padding: calc(var(--nav-h) + 48px) 32px 48px; }
+      .hero-headline { font-size: 58px; }
+      .services-section { padding: 0 32px 60px; }
+      .services-grid { grid-template-columns: repeat(2,1fr); gap: 14px; }
+      .hiw-scroll-shell { height: 290vh; }
+      .hiw-sticky-stage { top: var(--nav-h); height: calc(100vh - var(--nav-h)); }
+      .hiw-inner { padding: 24px 32px 0; }
+      .hiw-title { font-size: 38px; line-height: 46px; }
+      .hiw-desktop-wrap { width: min(620px,76vw); }
+      .hiw-story-copy { position: relative; right: auto; bottom: auto; width: 220px; min-height: 120px; margin: 0 0 62px 10px; }
+      .partners-inner { grid-template-columns: 1fr; }
+      .partners-photo-col { min-height: 300px; max-height: 360px; }
+      .partners-content-col { padding: 56px 48px; }
+      .testimonials-section { padding: 80px 40px; gap: 24px; }
+      .news-section { padding: 72px 0; }
+      .news-section-header { padding: 0 32px; }
+      .news-track { padding: 0 32px; }
+      .promo-section { aspect-ratio: 16/10; max-height: none; }
+      .promo-title { font-size: 36px; line-height: 44px; min-height: 88px; margin-bottom: 24px; }
+      .promo-content { padding: 40px 48px; max-width: 520px; }
+      .faq-section { padding: 64px 32px; }
+      .faq-title { font-size: 38px; }
+      .faq-question { font-size: 18px; }
+      .footer-top { padding: 56px 32px 48px; gap: 32px; grid-template-columns: 1fr 1fr; }
+      .footer-bottom { padding: 14px 32px; }
+      .agent-home { padding: calc(var(--nav-h) + 24px) 32px 32px; }
+      .agent-shell { grid-template-columns: 1fr; }
+      .booking-panel { position: static; }
+    }
+    @media (max-width: 768px) {
+      .hero-headline { font-size: 44px; }
+      .hero-sub { font-size: 16px; }
+      .nav-auth-guest .btn-login { display: inline-flex; }
+      .hiw-scroll-shell { height: auto; }
+      .hiw-sticky-stage { position: relative; height: auto; }
+      .hiw-inner { padding: 48px 20px 0; }
+      .hiw-title { font-size: 32px; line-height: 42px; margin-bottom: 36px; }
+      .hiw-stage-row { display: block; max-width: none; margin-top: 0; }
+      .hiw-desktop-wrap { display: none; }
+      .hiw-story-copy { display: none; }
+      .hiw-mobile-wrap { display: block; overflow: hidden; }
+      .hiw-section { overflow: hidden; }
+      .partners-content-col { padding: 48px 32px; }
+      .testimonials-section { padding: 72px 20px; }
+      .testi-nav svg { width: 28px; height: 28px; }
+      .promo-shell { height: auto; }
+      .promo-section { position: relative; aspect-ratio: 4/5; max-height: none; }
+      .promo-content { padding: 40px 32px; max-width: 100%; }
+      .promo-title { font-size: 32px; line-height: 40px; min-height: 80px; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; padding: 48px 32px 40px; }
+      .auth-socials { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      :root { --px: 20px; }
+      .hero { padding: calc(var(--nav-h) + 36px) 20px 40px; }
+      .hero-headline { font-size: 34px; }
+      .hero-cta { gap: 10px; }
+      .services-section { padding: 0 20px 48px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .news-section { padding: 56px 0; }
+      .news-section-header { padding: 0 20px; }
+      .news-track { padding: 0 20px; }
+      .news-card { width: 300px; }
+      .promo-section { aspect-ratio: 3/4; }
+      .promo-content { padding: 32px 20px; }
+      .promo-title { font-size: 26px; line-height: 34px; min-height: 68px; margin-bottom: 18px; }
+      .promo-feature span { font-size: 14px; }
+      .promo-btn { font-size: 15px; width: 100%; justify-content: center; }
+      .faq-section { padding: 56px 20px; }
+      .faq-title { font-size: 28px; }
+      .faq-question { font-size: 15px; padding: 18px 0; }
+      .partners-content-col { padding: 40px 20px; }
+      .testimonials-section { padding: 60px 16px; gap: 12px; }
+      .footer-top { padding: 40px 20px 36px; }
+      .footer-bottom { padding: 14px 20px; flex-direction: column; gap: 4px; }
+      .agent-home { padding: calc(var(--nav-h) + 20px) 20px 24px; }
+      .agent-head { flex-direction: column; align-items: flex-start; }
+      .agent-messages { padding: 16px; }
+      .agent-compose { flex-direction: column; }
+      .agent-send { width: 100%; }
+      .booking-input-group { grid-template-columns: 1fr; }
+      .auth-modal { padding: 24px 20px; border-radius: 18px; }
+    }
   </style>
 </head>
 <body>
-  <nav class="nav" id="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="Setser Group homepage">
-        <img src="icons/sg-logo-mark.jpg" alt="Setser Group logo" />
-        <span class="brand-copy">
-          <span class="brand-kicker">Homepage release</span>
-          <span class="brand-name">Setser Group</span>
-        </span>
-      </a>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#focus">Focus</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <a class="nav-cta" href="#services">Explore the 4 areas</a>
+
+<!-- Scroll progress indicator -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  NAVBAR                                              ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="icons/sg-logo-header.jpg" alt="Setser Group" class="nav-logo-img"
+         onerror="this.style.display='none'; this.parentElement.querySelector('.nav-logo-fallback').style.display='flex'" />
+    <span class="nav-logo-fallback">
+      <span class="nav-logo-mark">S</span>
+      <span class="nav-logo-name">Setser Group</span>
+    </span>
+  </a>
+  <div class="nav-spacer"></div>
+  <div class="nav-buttons">
+    <div class="nav-auth-guest">
+      <button class="btn-login" data-login-trigger="true" type="button">Login</button>
+      <a href="#" class="btn-signup">Register</a>
     </div>
-  </nav>
-
-  <main id="top">
-    <section class="hero">
-      <div class="wrap hero-shell">
-        <div data-reveal>
-          <span class="eyebrow">Setser Group</span>
-          <h1>Become A<span class="hero-word"><span id="heroWord">Leader</span><span class="cursor">|</span></span></h1>
-          <p>Setser Group is a North Carolina-based consulting firm led by Bryan Setser, helping leaders and organizations navigate learning, work, AI, and human-centered change with sharper strategy, stronger teams, and practical implementation.</p>
-          <div class="status">Only the homepage is live right now while deeper service pages are being shaped.</div>
-          <div class="actions">
-            <a class="btn btn-primary" href="#services">See the service framing</a>
-            <a class="btn btn-secondary" href="#approach">See how the work moves</a>
-          </div>
-        </div>
-        <aside class="hero-side" data-reveal>
-          <div class="panel">
-            <p class="panel-kicker">Current positioning</p>
-            <h2>Leadership, teaming, and productive organizations.</h2>
-            <p>This temporary release keeps the message simple: four clear outcomes up top, one active homepage, and a clean foundation for the fuller Setser Group story.</p>
-            <ul>
-              <li>Strategic advisory that turns ambiguity into direction.</li>
-              <li>Design labs that move ideas into tangible operating models.</li>
-              <li>Implementation support that helps work stick in real environments.</li>
-            </ul>
-          </div>
-          <div class="note"><strong>Focus areas for now:</strong> AI integration, human literacy, leadership development, educational innovation, and the systems that help teams do their best work together.</div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="head" data-reveal>
-          <span class="tag">Top services</span>
-          <h2>The homepage now frames Setser Group around four simple outcomes.</h2>
-          <p>Bryan's four service directions now lead the experience. The detailed inner pages are intentionally disabled for the moment, so this version keeps the focus on the homepage while content direction catches up.</p>
-        </div>
-        <div class="services">
-          <article class="service" data-reveal style="--img:url('images/sg-service-cert.png')">
-            <span class="service-kicker">Leadership foundations</span>
-            <h3>Become a Leader</h3>
-            <p>Clarify direction, sharpen decision-making, and build the posture needed to lead meaningful change.</p>
-            <p class="soon">Detailed page coming soon</p>
-          </article>
-          <article class="service" data-reveal style="--img:url('images/sg-service-prep.png')">
-            <span class="service-kicker">Coaching and growth</span>
-            <h3>Become a Better Leader</h3>
-            <p>Develop stronger habits, better communication, and more intentional leadership in the moments that matter most.</p>
-            <p class="soon">Detailed page coming soon</p>
-          </article>
-          <article class="service" data-reveal style="--img:url('images/sg-service-coaching.png')">
-            <span class="service-kicker">Culture and teaming</span>
-            <h3>Become a Great Team</h3>
-            <p>Strengthen collaboration, trust, and accountability so teams move together instead of working past one another.</p>
-            <p class="soon">Detailed page coming soon</p>
-          </article>
-          <article class="service" data-reveal style="--img:url('images/sg-service-learning.png')">
-            <span class="service-kicker">Operating effectiveness</span>
-            <h3>Become a Productive Organization</h3>
-            <p>Design clearer systems, align execution, and create operating rhythms that help good strategy turn into real progress.</p>
-            <p class="soon">Detailed page coming soon</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="approach">
-      <div class="wrap">
-        <div class="head" data-reveal>
-          <span class="tag">Approach</span>
-          <h2>The work is built to move from direction to design to implementation.</h2>
-          <p>Setser Group is not just about ideas. The shape of the work suggests a practical rhythm: understand the challenge, design a better path, and help teams carry it into daily practice.</p>
-        </div>
-        <div class="approach">
-          <div class="stack">
-            <article class="card" data-reveal><span class="count">01</span><h3>Strategic advisory</h3><p>Make sense of the moment, name the real challenge, and align leaders around what matters most before energy gets scattered.</p></article>
-            <article class="card" data-reveal><span class="count">02</span><h3>Design labs</h3><p>Turn strategy into something people can work with: clearer experiences, better structures, and operating models that feel intentional instead of theoretical.</p></article>
-            <article class="card" data-reveal><span class="count">03</span><h3>Implementation support</h3><p>Stay close enough to the work that momentum keeps building, teams stay supported, and the change becomes usable in the real world.</p></article>
-          </div>
-          <aside class="aside" data-reveal>
-            <h3>Homepage first. Inner pages later.</h3>
-            <p>This temporary release intentionally disables the old inner pages. It gives you one strong, on-brand entry point right now without exposing outdated service detail pages underneath.</p>
-            <ul>
-              <li>The homepage is the only active destination.</li>
-              <li>Old routes now redirect back here.</li>
-              <li>The structure is ready for fuller content once direction lands.</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="focus">
-      <div class="wrap focus-grid">
-        <article class="focus" data-reveal>
-          <span class="tag">Focus areas</span>
-          <h3>Where the Setser Group story can grow next.</h3>
-          <p>Based on the guidance you shared, the broader Setser Group frame points toward leadership, learning, AI integration, and practical change work that helps organizations move with more clarity and humanity.</p>
-          <div class="chips">
-            <span class="chip">Leadership development</span><span class="chip">AI integration</span><span class="chip">Human literacy</span><span class="chip">Educational innovation</span><span class="chip">Team effectiveness</span><span class="chip">Organizational design</span>
-          </div>
-        </article>
-        <article class="focus" data-reveal>
-          <span class="tag">Working style</span>
-          <h3>Head, heart, habits, and work that actually lands.</h3>
-          <p>The site can keep evolving around a consulting voice that feels strategic but grounded: thoughtful about systems, practical about implementation, and serious about how people experience change.</p>
-          <div class="quote"><strong>Temporary positioning note:</strong> this homepage is deliberately lean so the brand, color, logo, and four service outcomes are clean right away without overcommitting the deeper story before you get more direction.</div>
-        </article>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="wrap">
-        <div class="head" data-reveal>
-          <span class="tag">FAQ</span>
-          <h2>A few quick answers about this temporary release.</h2>
-        </div>
-        <div class="faq-list">
-          <article class="faq-item open" data-reveal>
-            <button class="faq-btn" type="button" aria-expanded="true"><span>What is live on the site right now?</span><span class="icon" aria-hidden="true">+</span></button>
-            <div class="faq-wrap" style="height:auto"><div class="faq-answer">Only the homepage is active. The previous inner pages have been disabled for now and redirect back to the homepage so visitors stay inside the new Setser Group framing.</div></div>
-          </article>
-          <article class="faq-item" data-reveal>
-            <button class="faq-btn" type="button" aria-expanded="false"><span>What do the four service cards represent?</span><span class="icon" aria-hidden="true">+</span></button>
-            <div class="faq-wrap"><div class="faq-answer">They are the current homepage framing from Bryan's note: become a leader, become a better leader, become a great team, and become a productive organization. They set the direction without forcing unfinished inner pages live too early.</div></div>
-          </article>
-          <article class="faq-item" data-reveal>
-            <button class="faq-btn" type="button" aria-expanded="false"><span>Can the old inner pages come back later?</span><span class="icon" aria-hidden="true">+</span></button>
-            <div class="faq-wrap"><div class="faq-answer">Yes. The redirect setup is temporary and easy to reverse. Once you get the next round of content direction, we can rebuild or repurpose those routes without losing this homepage work.</div></div>
-          </article>
-          <article class="faq-item" data-reveal>
-            <button class="faq-btn" type="button" aria-expanded="false"><span>Why does the site feel simpler now?</span><span class="icon" aria-hidden="true">+</span></button>
-            <div class="faq-wrap"><div class="faq-answer">Because the goal for this pass is clarity. The site now leads with the Setser Group brand, the new logo, the correct primary color, and one focused homepage instead of exposing legacy messaging that still needs to be rewritten.</div></div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-box" data-reveal>
-        <div class="footer-grid">
-          <div>
-            <a class="brand" href="#top">
-              <img src="icons/sg-logo-mark.jpg" alt="Setser Group logo" />
-              <span class="brand-copy"><span class="brand-kicker" style="color:rgba(255,255,255,.54)">Temporary release</span><span class="brand-name" style="color:#fff">Setser Group</span></span>
-            </a>
-            <h2 class="footer-title">One clean homepage now, room for the full story next.</h2>
-            <p class="footer-copy">The site now uses the <code>sg-</code> asset prefix, the main brand color is <code>#103232</code>, and the legacy inner pages are currently disabled so the homepage can lead with confidence.</p>
-          </div>
-          <div class="footer-meta">
-            <span class="footer-chip">Homepage only</span>
-            <span class="footer-chip">Old routes redirect here</span>
-            <span class="footer-chip">Ready for GitHub and Vercel</span>
-            <p class="footer-note">More detailed service pages, contact flows, and deeper content can be layered back in once you get the next round of direction.</p>
-          </div>
-        </div>
-        <div class="footer-bottom">Copyright &copy; <span id="year"></span> Setser Group. Temporary homepage release.</div>
+    <div class="nav-auth-user">
+      <button class="profile-toggle" id="profileMenuButton" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="profileMenu">
+        <span class="profile-avatar">U</span>
+        <span class="profile-label">Profile</span>
+        <span class="profile-caret" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="profile-menu" id="profileMenu" hidden>
+        <button class="profile-menu-item" id="headerSignout" type="button">Sign out</button>
       </div>
     </div>
-  </footer>
+  </div>
+</nav>
 
-  <script>
-    const nav=document.getElementById("nav"),year=document.getElementById("year"),heroWord=document.getElementById("heroWord"),words=["Leader","Better Leader"],reveals=document.querySelectorAll("[data-reveal]");
-    if(year)year.textContent=new Date().getFullYear();
-    const syncNav=()=>nav&&nav.classList.toggle("scrolled",window.scrollY>8);window.addEventListener("scroll",syncNav,{passive:true});syncNav();
-    if(heroWord&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){let i=0,c=words[0].length,del=false;setInterval(()=>{const word=words[i];if(!del){c+=1;heroWord.textContent=word.slice(0,c);if(c>=word.length)del=true;return}c-=1;heroWord.textContent=word.slice(0,Math.max(c,0));if(c<=0){i=(i+1)%words.length;del=false}},130)}
-    if("IntersectionObserver" in window&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add("show");io.unobserve(e.target)}),{threshold:.12});reveals.forEach(el=>io.observe(el))}else{reveals.forEach(el=>el.classList.add("show"))}
-    const items=document.querySelectorAll(".faq-item");items.forEach(item=>{const btn=item.querySelector(".faq-btn"),wrap=item.querySelector(".faq-wrap"),answer=item.querySelector(".faq-answer");if(item.classList.contains("open"))wrap.style.height=answer.offsetHeight+"px";btn.addEventListener("click",()=>{const open=item.classList.contains("open");items.forEach(node=>{node.classList.remove("open");node.querySelector(".faq-btn").setAttribute("aria-expanded","false");node.querySelector(".faq-wrap").style.height="0px"});if(open)return;item.classList.add("open");btn.setAttribute("aria-expanded","true");wrap.style.height=answer.offsetHeight+"px"})});window.addEventListener("resize",()=>{const open=document.querySelector(".faq-item.open");if(!open)return;open.querySelector(".faq-wrap").style.height=open.querySelector(".faq-answer").offsetHeight+"px"});
-  </script>
+<!-- MOBILE MENU -->
+<div class="mob" id="mob">
+  <div class="mob-head">
+    <a href="index.html" class="nav-logo">
+      <img src="icons/sg-logo-header.jpg" alt="Setser Group" class="nav-logo-img" style="height:32px;"
+           onerror="this.style.display='none'; this.parentElement.querySelector('.nav-logo-fallback').style.display='flex'" />
+      <span class="nav-logo-fallback"><span class="nav-logo-mark">S</span><span class="nav-logo-name">Setser Group</span></span>
+    </a>
+    <button class="mob-close" id="mob-close" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mob-body">
+    <p class="mob-section-label">Services</p>
+    <a class="mob-link" href="certification.html">Become a Leader</a>
+    <a class="mob-link" href="test-prep.html">Become a Better Leader</a>
+    <a class="mob-link" href="coaching.html">Become a Great Team</a>
+    <a class="mob-link" href="learning.html">Become a Productive Organization</a>
+    <p class="mob-section-label" style="margin-top:8px;">Company</p>
+                    <a class="mob-link" href="about.html">About</a>
+                    <a class="mob-link" href="for-organizations.html">For Organizations</a>
+                    <a class="mob-link" href="for-individuals.html">For Individuals</a>
+                    <a class="mob-link" href="pricing.html">Pricing</a>
+  </div>
+  <div class="mob-foot">
+    <a class="btn-signup" href="#" style="justify-content:center;font-size:16px;padding:13px 22px;">Register</a>
+    <button class="btn-login" data-login-trigger="true" style="width:100%;font-size:16px;padding:12px 22px;">Login</button>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  HERO                                                ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="agent-home" id="agentHome" aria-label="Setser Group Workspace">
+  <div class="agent-shell">
+    <div class="agent-chat-panel">
+      <div class="agent-head">
+        <div>
+          <h1 class="agent-title">Setser Group Workspace</h1>
+          <p class="agent-subtitle">A temporary workspace shell while the full Setser Group experience is being shaped.</p>
+        </div>
+        <button class="btn btn-outline agent-logout" id="agentLogout" type="button">Logout</button>
+      </div>
+      <div class="agent-messages" id="agentMessages">
+        <p class="agent-msg agent-msg-assistant">This workspace is not active yet. The homepage is the only live part of the site right now.</p>
+      </div>
+      <form class="agent-compose" id="agentCompose" novalidate>
+        <input class="agent-input" id="agentInput" type="text" placeholder="Type your message..." />
+        <button class="btn btn-brand agent-send" type="submit">Send</button>
+      </form>
+    </div>
+
+    <aside class="booking-panel" aria-label="Create booking flow">
+      <h2 class="booking-title">Create Booking Flow</h2>
+      <p class="booking-subtitle">UI prototype flow. Integrations will be connected in a later phase.</p>
+      <div class="booking-progress" id="bookingProgress">
+        <span class="booking-progress-step is-active"></span>
+        <span class="booking-progress-step"></span>
+        <span class="booking-progress-step"></span>
+        <span class="booking-progress-step"></span>
+      </div>
+
+      <form id="bookingFlowForm" novalidate>
+        <div class="booking-step is-active" data-step="1">
+          <p class="booking-step-title">Step 1: Select a service</p>
+          <input id="bookingService" class="booking-input" type="text" placeholder="Service name" />
+          <p class="booking-hint" data-hint-for="1"></p>
+          <div class="booking-nav">
+            <button class="btn btn-brand btn-sm" data-booking-next="1" type="button">Next</button>
+          </div>
+        </div>
+
+        <div class="booking-step" data-step="2">
+          <p class="booking-step-title">Step 2: Select a coach</p>
+          <input id="bookingCoach" class="booking-input" type="text" placeholder="Coach name" />
+          <p class="booking-hint" data-hint-for="2"></p>
+          <div class="booking-nav">
+            <button class="btn btn-ghost btn-sm" data-booking-back="2" type="button">Back</button>
+            <button class="btn btn-brand btn-sm" data-booking-next="2" type="button">Next</button>
+          </div>
+        </div>
+
+        <div class="booking-step" data-step="3">
+          <p class="booking-step-title">Step 3: Choose date and time</p>
+          <div class="booking-input-group">
+            <input id="bookingDate" class="booking-input" type="date" />
+            <input id="bookingTime" class="booking-input" type="time" />
+          </div>
+          <p class="booking-hint" data-hint-for="3"></p>
+          <div class="booking-nav">
+            <button class="btn btn-ghost btn-sm" data-booking-back="3" type="button">Back</button>
+            <button class="btn btn-brand btn-sm" data-booking-next="3" type="button">Next</button>
+          </div>
+        </div>
+
+        <div class="booking-step" data-step="4">
+          <p class="booking-step-title">Step 4: Confirm booking</p>
+          <div class="booking-summary" id="bookingSummary"></div>
+          <p class="booking-hint" data-hint-for="4"></p>
+          <div class="booking-nav">
+            <button class="btn btn-ghost btn-sm" data-booking-back="4" type="button">Back</button>
+            <button class="btn btn-brand btn-sm" id="bookingConfirm" type="submit">Confirm booking</button>
+          </div>
+          <p class="booking-success" id="bookingSuccess">Booking flow confirmed. This is a UI-only confirmation.</p>
+        </div>
+      </form>
+
+      <div class="booking-upcoming">
+        <h4>Upcoming bookings</h4>
+        <ul class="booking-list" id="bookingList"></ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="marketing-view" id="marketingView">
+<section class="hero" id="hero">
+  <h1 class="hero-headline reveal">
+    Become A
+    <br />
+    <span class="hero-typing-line">
+      <span id="heroTypingText" class="hero-typing-text"></span><span class="hero-cursor">|</span>
+    </span>
+  </h1>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+    |  SERVICES - photo cards                              |
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="services-section" id="services">
+  <p class="services-label reveal">How can we help you?</p>
+  <div class="services-grid">
+    <a class="service-card reveal reveal-d1" href="certification.html">
+      <p class="card-title">Become a Leader</p>
+      <div class="card-image-area img-cert" role="img" aria-label="Become a Leader"></div>
+      <span class="card-badge">Leadership foundations</span>
+    </a>
+    <a class="service-card reveal reveal-d2" href="test-prep.html">
+      <p class="card-title">Become a Better Leader</p>
+      <div class="card-image-area img-prep" role="img" aria-label="Become a Better Leader"></div>
+      <span class="card-badge">Coaching &amp; growth</span>
+    </a>
+    <a class="service-card reveal reveal-d3" href="coaching.html">
+      <p class="card-title">Become a Great Team</p>
+      <div class="card-image-area img-coaching" role="img" aria-label="Become a Great Team"></div>
+      <span class="card-badge">Culture &amp; collaboration</span>
+    </a>
+    <a class="service-card reveal reveal-d4" href="learning.html">
+      <p class="card-title">Become a Productive Organization</p>
+      <div class="card-image-area img-learning" role="img" aria-label="Become a Productive Organization"></div>
+      <span class="card-badge">Systems &amp; execution</span>
+    </a>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+    |  HOW IT WORKS - pinned scroll                        |
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="hiw-section" id="hiw">
+  <div class="hiw-scroll-shell" id="hiwShell">
+    <div class="hiw-sticky-stage">
+      <div class="hiw-inner">
+        <div class="hiw-tag">
+          <span class="hiw-tag-dot"></span>
+          <span class="hiw-tag-text">Simple, Clear &amp; Effective</span>
+        </div>
+        <h2 class="hiw-title">From first conversation<br />to organizational impact.</h2>
+        <div class="hiw-stage-row">
+          <div class="hiw-desktop-wrap">
+            <img src="images/sg-hiw-1.png" alt="Step 1 - Clarify the real challenge" class="hiw-desktop-img is-visible" />
+            <img src="images/sg-hiw-2.png" alt="Step 2 - Design the right path" class="hiw-desktop-img" />
+            <img src="images/sg-hiw-3.png" alt="Step 3 - Put the work into practice" class="hiw-desktop-img" />
+          </div>
+          <div class="hiw-story-copy" id="hiwStoryCopy">
+           <p class="hiw-story-step is-active">Start with the leadership, team, or organizational challenge that feels most urgent and make the problem clear.</p>
+            <p class="hiw-story-step">Shape the right path through strategic advisory, design labs, and support that matches the work in front of you.</p>
+            <p class="hiw-story-step">Carry the ideas into practice with clearer habits, stronger alignment, and systems that help the work stick.</p>
+          </div>
+        </div>
+        <div class="hiw-mobile-wrap">
+          <img src="images/sg-hiw-1.png" alt="How Setser Group works" class="hiw-mobile-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  RESULTS                                             ║
+     ╚══════════════════════════════════════════════════════╝ -->
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  NEWS                                                ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="news-section">
+  <div class="news-section-header reveal">
+    <h2 class="news-title">Latest from Setser Group</h2>
+  </div>
+  <div class="news-overflow-clip">
+    <div class="news-track-mask">
+      <div class="news-track">
+        <!-- Set 1 -->
+        <article class="news-card">
+          <div class="news-card-img nc-img-1"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Setser Group helps leaders make sense of AI, learning, and change</h3>
+           <p class="news-card-excerpt">The work centers on practical strategy and implementation so complex shifts become clearer and more usable for real teams.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card-img nc-img-2"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">New team development framing: head, heart, habits</h3>
+           <p class="news-card-excerpt">A stronger team is not just aligned on goals. It is aligned on trust, communication, and the habits that make work move.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card-img nc-img-3"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">From leadership growth to productive organizations</h3>
+            <p class="news-card-excerpt">Setser Group's four service outcomes give the homepage a clearer path from individual leadership to organization-wide effectiveness.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <!-- Set 2 (duplicate for seamless loop) -->
+        <article class="news-card">
+          <div class="news-card-img nc-img-1"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Setser Group helps leaders make sense of AI, learning, and change</h3>
+           <p class="news-card-excerpt">The work centers on practical strategy and implementation so complex shifts become clearer and more usable for real teams.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card-img nc-img-2"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">New team development framing: head, heart, habits</h3>
+           <p class="news-card-excerpt">A stronger team is not just aligned on goals. It is aligned on trust, communication, and the habits that make work move.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card-img nc-img-3"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">From leadership growth to productive organizations</h3>
+            <p class="news-card-excerpt">Setser Group's four service outcomes give the homepage a clearer path from individual leadership to organization-wide effectiveness.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <!-- Set 3 (duplicate for seamless loop) -->
+        <article class="news-card">
+          <div class="news-card-img nc-img-1"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Setser Group helps leaders make sense of AI, learning, and change</h3>
+           <p class="news-card-excerpt">The work centers on practical strategy and implementation so complex shifts become clearer and more usable for real teams.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card-img nc-img-2"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">New team development framing: head, heart, habits</h3>
+           <p class="news-card-excerpt">A stronger team is not just aligned on goals. It is aligned on trust, communication, and the habits that make work move.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card-img nc-img-3"></div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">From leadership growth to productive organizations</h3>
+            <p class="news-card-excerpt">Setser Group's four service outcomes give the homepage a clearer path from individual leadership to organization-wide effectiveness.</p>
+            <div class="news-card-footer">
+              <span class="news-read-more">Read more</span>
+              <span class="news-arrow-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  PROMO                                              ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<div class="promo-shell" id="promoShell">
+  <section class="promo-section">
+    <div class="promo-bg"></div>
+    <div class="promo-content">
+      <h2 class="promo-title">
+        <span class="promo-title-line promo-title-top"><span id="promoTitleTop"></span><span class="promo-cursor">|</span></span>
+        <span class="promo-title-line promo-title-bottom"><span id="promoTitleBottom"></span></span>
+      </h2>
+      <ul class="promo-features">
+        <li class="promo-feature">
+          <span class="promo-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>Strategic advisory matched to the challenge in front of you</span>
+        </li>
+        <li class="promo-feature">
+          <span class="promo-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span>Design labs that turn ideas into usable operating models</span>
+        </li>
+        <li class="promo-feature">
+          <span class="promo-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+         <span>Implementation support that helps change stick in the real world</span>
+        </li>
+      </ul>
+      <a href="#services" class="promo-btn">Explore the Homepage</a>
+    </div>
+  </section>
+</div>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  FAQ                                                 ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <h2 class="faq-title reveal">FAQs</h2>
+
+    <div class="faq-item faq-item--open reveal">
+      <button class="faq-question" aria-expanded="true">
+        <span>Who is Setser Group for?</span>
+        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Setser Group is for leaders, teams, and organizations navigating learning, work, AI, and change and looking for clearer strategy, stronger collaboration, and better execution.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-question" aria-expanded="false">
+        <span>What do the four homepage services represent?</span>
+        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>They are the current top-line Setser Group outcomes: become a leader, become a better leader, become a great team, and become a productive organization.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-question" aria-expanded="false">
+        <span>How does Setser Group work with clients?</span>
+        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>The current framing points to strategic advisory, design labs, and implementation support that help teams move from understanding the problem to carrying a better approach into practice.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-question" aria-expanded="false">
+        <span>Can my whole organization partner with Setser Group?</span>
+        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>Yes. This work can support leadership teams, school systems, nonprofits, and organizations that need clearer alignment, stronger teaming, and more productive operating rhythms.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-question" aria-expanded="false">
+        <span>Why are the other pages disabled?</span>
+        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+      </button>
+      <div class="faq-answer">
+        <p>This is a homepage-only release for now. The deeper pages are intentionally disabled until you get more direction on how each Setser Group service should be shaped.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  FOOTER                                              ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="icons/sg-logo-footer.jpg" alt="Setser Group" class="footer-logo-img" onerror="this.style.display='none'" />
+      <p class="footer-tagline">Setser Group is a North Carolina-based consulting firm focused on leadership, teaming, AI integration, learning, and practical implementation that helps organizations do their best work.</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-heading">Services</h4>
+      <div class="footer-links-grid footer-links-single">
+        <a href="certification.html">Become a Leader</a>
+        <a href="test-prep.html">Become a Better Leader</a>
+        <a href="coaching.html">Become a Great Team</a>
+        <a href="learning.html">Become a Productive Organization</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-heading">Company</h4>
+      <div class="footer-links-grid footer-links-single">
+                        <a href="about.html">About</a>
+                        <a href="for-organizations.html">For Organizations</a>
+                        <a href="for-individuals.html">For Individuals</a>
+                        <a href="pricing.html">Pricing</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-heading">Contact Us</h4>
+      <div class="footer-contact-list">
+        <p class="footer-contact-item"><strong>Phone:</strong> Contact details coming soon</p>
+        <p class="footer-contact-item"><strong>Email:</strong> Homepage-only release</p>
+        <p class="footer-contact-item"><strong>Address:</strong> Additional company details coming soon</p>
+      </div>
+      <div class="footer-socials">
+        <a href="index.html" class="footer-social-link" aria-label="Homepage">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="index.html" class="footer-social-link" aria-label="Homepage">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="index.html" class="footer-social-link" aria-label="Homepage">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="index.html" class="footer-social-link" aria-label="Homepage">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">Copyright &copy; <span id="yr"></span> Setser Group</p>
+  </div>
+</footer>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  CHATBOT                                             ║
+     ╚══════════════════════════════════════════════════════╝ -->
+</div>
+
+<div class="auth-modal-backdrop" id="authModalBackdrop" aria-hidden="true">
+  <div class="auth-modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <div class="auth-modal-brand" aria-hidden="true">
+      <img src="icons/sg-logo-header.jpg" alt="" />
+    </div>
+    <div class="auth-modal-head">
+      <h2 class="auth-modal-title" id="authModalTitle">Login</h2>
+      <button class="auth-modal-close" id="authModalClose" type="button" aria-label="Close login modal">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.3" style="width:16px;height:16px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <p class="auth-modal-copy">Sign-in is not active yet. The homepage is the only live part of the Setser Group site right now.</p>
+    <div class="auth-socials">
+      <button class="auth-social" id="authGoogle" type="button">
+        <img class="auth-social-icon" src="icons/sg-google.svg" alt="" />
+        <span>Continue with Google</span>
+      </button>
+      <button class="auth-social" id="authFacebook" type="button">
+        <img class="auth-social-icon" src="icons/sg-facebook.svg" alt="" />
+        <span>Continue with Facebook</span>
+      </button>
+    </div>
+    <div class="auth-divider">OR</div>
+    <form class="auth-form" id="authForm" novalidate>
+      <label class="auth-label" for="authEmail">Email</label>
+      <input class="auth-input" id="authEmail" type="email" autocomplete="email" placeholder="Enter your email" required />
+      <label class="auth-label" for="authPassword">Password</label>
+      <input class="auth-input" id="authPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+      <div class="auth-meta">
+        <label class="auth-check" for="authRemember">
+          <input id="authRemember" type="checkbox" />
+          <span>Remember me</span>
+        </label>
+        <a class="auth-link" href="#">Forgot password?</a>
+      </div>
+      <button class="btn btn-brand auth-submit" id="authSubmit" type="submit">Log in</button>
+    </form>
+    <p class="auth-foot-copy">Don't have an account yet? <a href="#">Register</a></p>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const AUTH_KEY = 'setsergroup_auth_state';
+  const appState = {
+    authState: 'unauthenticated',
+    agentView: 'chat',
+    bookingStep: 1,
+    bookingDraft: { serviceText: '', coachText: '', date: '', time: '' }
+  };
+  window.SG_UI_STATE = appState;
+
+  const yearEl = document.getElementById('yr');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const progressBar = document.getElementById('scrollProgress');
+  function updateProgress() {
+    if (!progressBar) return;
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach((el) => revealObs.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('revealed'));
+  }
+
+  const navbar = document.getElementById('navbar');
+  function syncNavbar() {
+    if (!navbar) return;
+    navbar.classList.toggle('scrolled', window.scrollY > 10);
+  }
+  window.addEventListener('scroll', syncNavbar, { passive: true });
+  syncNavbar();
+
+  const mob = document.getElementById('mob');
+  const hamBtn = document.getElementById('ham');
+  const mobCloseBtn = document.getElementById('mob-close');
+  if (hamBtn && mob) {
+    hamBtn.addEventListener('click', () => {
+      mob.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  if (mobCloseBtn && mob) {
+    mobCloseBtn.addEventListener('click', () => {
+      mob.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+
+  const heroWords = ['Leader', 'Better Leader'];
+  const heroTextEl = document.getElementById('heroTypingText');
+  let heroWordIndex = 0;
+  function typeHeroText(text, cb) {
+    let i = 0;
+    heroTextEl.textContent = '';
+    function typeTick() {
+      if (i < text.length) {
+        heroTextEl.textContent += text[i++];
+        setTimeout(typeTick, 75);
+      } else if (cb) {
+        cb();
+      }
+    }
+    typeTick();
+  }
+  function deleteHeroText(cb) {
+    function deleteTick() {
+      const current = heroTextEl.textContent;
+      if (current.length > 0) {
+        heroTextEl.textContent = current.slice(0, -1);
+        setTimeout(deleteTick, 45);
+      } else if (cb) {
+        cb();
+      }
+    }
+    deleteTick();
+  }
+  function animateHero() {
+    typeHeroText(heroWords[heroWordIndex], () => {
+      setTimeout(() => {
+        deleteHeroText(() => {
+          heroWordIndex = (heroWordIndex + 1) % heroWords.length;
+          setTimeout(animateHero, 300);
+        });
+      }, 2200);
+    });
+  }
+  if (heroTextEl) setTimeout(animateHero, 600);
+
+  const faqItems = document.querySelectorAll('.faq-item');
+  document.querySelectorAll('.faq-answer').forEach((answer) => {
+    const contentInner = answer.innerHTML;
+    answer.innerHTML = `<div class="faq-answer-inner">${contentInner}</div>`;
+  });
+  faqItems.forEach((item) => {
+    if (item.classList.contains('faq-item--open')) {
+      const answer = item.querySelector('.faq-answer');
+      const inner = answer.querySelector('.faq-answer-inner');
+      answer.style.height = inner.offsetHeight + 'px';
+    }
+  });
+  faqItems.forEach((item) => {
+    const btn = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    if (!btn || !answer) return;
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('faq-item--open');
+      faqItems.forEach((node) => {
+        if (node.classList.contains('faq-item--open')) {
+          node.classList.remove('faq-item--open');
+          node.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          node.querySelector('.faq-answer').style.height = '0';
+        }
+      });
+      if (!isOpen) {
+        item.classList.add('faq-item--open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.height = answer.querySelector('.faq-answer-inner').offsetHeight + 'px';
+      }
+    });
+  });
+
+  const hiwShell = document.getElementById('hiwShell');
+  const hiwSteps = Array.from(document.querySelectorAll('.hiw-story-step'));
+  const hiwImages = Array.from(document.querySelectorAll('.hiw-desktop-img'));
+  function updateHIW() {
+    if (!hiwShell || hiwSteps.length === 0) return;
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      hiwSteps.forEach((step, i) => step.classList.toggle('is-active', i === 0));
+      hiwImages.forEach((img, i) => img.classList.toggle('is-visible', i === 0));
+      return;
+    }
+    const navH = navbar ? navbar.offsetHeight : 0;
+    const viewH = Math.max(window.innerHeight - navH, 1);
+    const maxScroll = hiwShell.offsetHeight - viewH;
+    if (maxScroll <= 0) return;
+    const top = hiwShell.getBoundingClientRect().top - navH;
+    const progress = Math.min(Math.max(-top / maxScroll, 0), 1);
+    const idx = Math.min(hiwSteps.length - 1, Math.floor(progress * hiwSteps.length));
+    hiwSteps.forEach((step, i) => step.classList.toggle('is-active', i === idx));
+    hiwImages.forEach((img, i) => img.classList.toggle('is-visible', i === idx));
+  }
+  let hiwTick = false;
+  function queueHIW() {
+    if (hiwTick) return;
+    hiwTick = true;
+    requestAnimationFrame(() => {
+      hiwTick = false;
+      updateHIW();
+    });
+  }
+  if (hiwShell) {
+    window.addEventListener('scroll', queueHIW, { passive: true });
+    window.addEventListener('resize', queueHIW);
+    window.addEventListener('load', queueHIW);
+    queueHIW();
+  }
+
+  const promoTitles = [
+    { top: 'Leadership, teaming,', bottom: 'and productive organizations.' },
+    { top: 'Strategy, design,', bottom: 'and implementation support.' }
+  ];
+  const promoTopEl = document.getElementById('promoTitleTop');
+  const promoBottomEl = document.getElementById('promoTitleBottom');
+  let promoIndex = 0;
+  let promoStarted = false;
+  function typePromo(el, text, cb) {
+    let i = 0;
+    el.textContent = '';
+    function tick() {
+      if (i < text.length) {
+        el.textContent += text[i++];
+        setTimeout(tick, 52);
+      } else if (cb) {
+        cb();
+      }
+    }
+    tick();
+  }
+  function deletePromo(el, cb) {
+    function tick() {
+      const current = el.textContent;
+      if (current.length > 0) {
+        el.textContent = current.slice(0, -1);
+        setTimeout(tick, 30);
+      } else if (cb) {
+        cb();
+      }
+    }
+    tick();
+  }
+  function animatePromo() {
+    const title = promoTitles[promoIndex];
+    typePromo(promoTopEl, title.top, () => {
+      typePromo(promoBottomEl, title.bottom, () => {
+        setTimeout(() => {
+          deletePromo(promoBottomEl, () => {
+            deletePromo(promoTopEl, () => {
+              promoIndex = (promoIndex + 1) % promoTitles.length;
+              setTimeout(animatePromo, 500);
+            });
+          });
+        }, 2400);
+      });
+    });
+  }
+  if (promoTopEl && promoBottomEl) {
+    const promoSection = document.querySelector('.promo-section');
+    if (promoSection && 'IntersectionObserver' in window) {
+      const promoObs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !promoStarted) {
+            promoStarted = true;
+            setTimeout(animatePromo, 300);
+          }
+        });
+      }, { threshold: 0.15 });
+      promoObs.observe(promoSection);
+    } else {
+      setTimeout(animatePromo, 800);
+    }
+  }
+
+  const authBackdrop = document.getElementById('authModalBackdrop');
+  const authModal = document.getElementById('authModal');
+  const authCloseBtn = document.getElementById('authModalClose');
+  const authForm = document.getElementById('authForm');
+  const authEmail = document.getElementById('authEmail');
+  const loginTriggers = document.querySelectorAll('[data-login-trigger]');
+  const socialGoogleBtn = document.getElementById('authGoogle');
+  const socialFacebookBtn = document.getElementById('authFacebook');
+  const profileMenuButton = document.getElementById('profileMenuButton');
+  const profileMenu = document.getElementById('profileMenu');
+  const headerSignoutBtn = document.getElementById('headerSignout');
+  const logoutBtn = document.getElementById('agentLogout');
+  const bookingForm = document.getElementById('bookingFlowForm');
+  const bookingSummary = document.getElementById('bookingSummary');
+  const bookingSuccess = document.getElementById('bookingSuccess');
+  const bookingList = document.getElementById('bookingList');
+  const bookingProgress = Array.from(document.querySelectorAll('.booking-progress-step'));
+  const bookingSteps = Array.from(document.querySelectorAll('.booking-step'));
+  const bookingHints = Array.from(document.querySelectorAll('.booking-hint'));
+  const bookingService = document.getElementById('bookingService');
+  const bookingCoach = document.getElementById('bookingCoach');
+  const bookingDate = document.getElementById('bookingDate');
+  const bookingTime = document.getElementById('bookingTime');
+  const agentCompose = document.getElementById('agentCompose');
+  const agentInput = document.getElementById('agentInput');
+  const agentMessages = document.getElementById('agentMessages');
+
+  let lastFocusedEl = null;
+
+  function getStoredAuth() {
+    try {
+      return localStorage.getItem(AUTH_KEY) === 'authenticated';
+    } catch (_err) {
+      return false;
+    }
+  }
+
+  function storeAuth(isAuthenticated) {
+    try {
+      if (isAuthenticated) localStorage.setItem(AUTH_KEY, 'authenticated');
+      else localStorage.removeItem(AUTH_KEY);
+    } catch (_err) {}
+  }
+
+  function clearBookingHints() {
+    bookingHints.forEach((hint) => { hint.textContent = ''; });
+  }
+
+  function updateBookingSummary() {
+    if (!bookingSummary) return;
+    const serviceText = appState.bookingDraft.serviceText || 'Not set';
+    const coachText = appState.bookingDraft.coachText || 'Not set';
+    const dateText = appState.bookingDraft.date || 'Not set';
+    const timeText = appState.bookingDraft.time || 'Not set';
+    bookingSummary.innerHTML =
+      `<strong>Service:</strong> ${serviceText}<br>` +
+      `<strong>Coach:</strong> ${coachText}<br>` +
+      `<strong>Date:</strong> ${dateText}<br>` +
+      `<strong>Time:</strong> ${timeText}`;
+  }
+
+  function setBookingStep(step) {
+    appState.bookingStep = step;
+    bookingSteps.forEach((panel) => panel.classList.toggle('is-active', Number(panel.dataset.step) === step));
+    bookingProgress.forEach((bar, i) => bar.classList.toggle('is-active', i < step));
+    if (step === 4) updateBookingSummary();
+  }
+
+  function closeProfileMenu() {
+    if (!profileMenu || !profileMenuButton) return;
+    profileMenu.hidden = true;
+    profileMenuButton.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleProfileMenu() {
+    if (!profileMenu || !profileMenuButton) return;
+    const willOpen = profileMenu.hidden;
+    profileMenu.hidden = !willOpen;
+    profileMenuButton.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+  }
+
+  function setAuthState(nextState, options) {
+    const config = Object.assign({ persist: true }, options || {});
+    appState.authState = nextState;
+    const isAuth = nextState === 'authenticated';
+    document.body.classList.toggle('is-authenticated', isAuth);
+    if (!isAuth) closeProfileMenu();
+    if (config.persist) storeAuth(isAuth);
+    if (isAuth) {
+      closeAuthModal();
+      setBookingStep(1);
+      clearBookingHints();
+      if (bookingSuccess) bookingSuccess.classList.remove('is-visible');
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  }
+
+  function openAuthModal() {
+    if (!authBackdrop || !authModal) return;
+    lastFocusedEl = document.activeElement;
+    authBackdrop.classList.add('is-open');
+    authBackdrop.setAttribute('aria-hidden', 'false');
+    authEmail.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeAuthModal() {
+    if (!authBackdrop) return;
+    authBackdrop.classList.remove('is-open');
+    authBackdrop.setAttribute('aria-hidden', 'true');
+    if (!mob || !mob.classList.contains('open')) document.body.style.overflow = '';
+    if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') lastFocusedEl.focus();
+  }
+
+  function trapModalTab(e) {
+    if (!authBackdrop || !authBackdrop.classList.contains('is-open')) return;
+    if (e.key !== 'Tab') return;
+    const focusable = Array.from(authModal.querySelectorAll('button, input, [href], [tabindex]:not([tabindex="-1"])'))
+      .filter((el) => !el.disabled && el.offsetParent !== null);
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+
+  function appendAgentMessage(kind, text) {
+    if (!agentMessages) return;
+    const bubble = document.createElement('p');
+    bubble.className = `agent-msg ${kind === 'user' ? 'agent-msg-user' : 'agent-msg-assistant'}`;
+    bubble.textContent = text;
+    agentMessages.appendChild(bubble);
+    agentMessages.scrollTop = agentMessages.scrollHeight;
+  }
+
+  function handleEmailLogin() {
+    closeAuthModal();
+  }
+
+  function handleSocialLogin() {
+    closeAuthModal();
+  }
+
+  function handleAgentSend(message) {
+    appendAgentMessage('user', message);
+    appendAgentMessage('assistant', 'Message captured in UI mode. AI behavior will be wired once technical details are provided.');
+  }
+
+  function validateBookingStep(step) {
+    if (step === 1 && !appState.bookingDraft.serviceText.trim()) return 'Please enter a service before continuing.';
+    if (step === 2 && !appState.bookingDraft.coachText.trim()) return 'Please enter a coach before continuing.';
+    if (step === 3 && (!appState.bookingDraft.date || !appState.bookingDraft.time)) return 'Please choose both date and time.';
+    return '';
+  }
+
+  function setBookingHint(step, message) {
+    const hintEl = bookingHints.find((hint) => Number(hint.dataset.hintFor) === step);
+    if (hintEl) hintEl.textContent = message || '';
+  }
+
+  function handleBookingSubmit() {
+    const booking = {
+      serviceText: appState.bookingDraft.serviceText,
+      coachText: appState.bookingDraft.coachText,
+      date: appState.bookingDraft.date,
+      time: appState.bookingDraft.time
+    };
+    const item = document.createElement('li');
+    item.textContent = `${booking.serviceText} with ${booking.coachText} on ${booking.date} at ${booking.time}`;
+    bookingList.prepend(item);
+    if (bookingSuccess) bookingSuccess.classList.add('is-visible');
+    return booking;
+  }
+
+  window.handleEmailLogin = handleEmailLogin;
+  window.handleSocialLogin = handleSocialLogin;
+  window.handleAgentSend = handleAgentSend;
+  window.handleBookingSubmit = handleBookingSubmit;
+
+  loginTriggers.forEach((trigger) => trigger.addEventListener('click', openAuthModal));
+  if (authCloseBtn) authCloseBtn.addEventListener('click', closeAuthModal);
+  if (authBackdrop) {
+    authBackdrop.addEventListener('click', (e) => {
+      if (e.target === authBackdrop) closeAuthModal();
+    });
+  }
+
+  if (authForm) {
+    authForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!authForm.reportValidity()) return;
+      handleEmailLogin();
+    });
+  }
+  if (socialGoogleBtn) socialGoogleBtn.addEventListener('click', handleSocialLogin);
+  if (socialFacebookBtn) socialFacebookBtn.addEventListener('click', handleSocialLogin);
+  if (profileMenuButton) {
+    profileMenuButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleProfileMenu();
+    });
+  }
+  if (headerSignoutBtn) headerSignoutBtn.addEventListener('click', () => setAuthState('unauthenticated'));
+  if (logoutBtn) logoutBtn.addEventListener('click', () => setAuthState('unauthenticated'));
+
+  if (agentCompose) {
+    agentCompose.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const message = agentInput.value.trim();
+      if (!message) return;
+      handleAgentSend(message);
+      agentInput.value = '';
+    });
+  }
+
+  if (bookingService) {
+    bookingService.addEventListener('input', () => { appState.bookingDraft.serviceText = bookingService.value; });
+  }
+  if (bookingCoach) {
+    bookingCoach.addEventListener('input', () => { appState.bookingDraft.coachText = bookingCoach.value; });
+  }
+  if (bookingDate) {
+    bookingDate.addEventListener('input', () => { appState.bookingDraft.date = bookingDate.value; });
+  }
+  if (bookingTime) {
+    bookingTime.addEventListener('input', () => { appState.bookingDraft.time = bookingTime.value; });
+  }
+
+  document.querySelectorAll('[data-booking-next]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const step = Number(btn.dataset.bookingNext);
+      setBookingHint(step, '');
+      const message = validateBookingStep(step);
+      if (message) {
+        setBookingHint(step, message);
+        return;
+      }
+      setBookingStep(Math.min(step + 1, 4));
+    });
+  });
+  document.querySelectorAll('[data-booking-back]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const step = Number(btn.dataset.bookingBack);
+      setBookingHint(step, '');
+      setBookingStep(Math.max(step - 1, 1));
+    });
+  });
+
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const step = 4;
+      const message = validateBookingStep(3);
+      setBookingHint(step, message);
+      if (message) return;
+      handleBookingSubmit();
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    if (!profileMenu || profileMenu.hidden) return;
+    const target = e.target;
+    if (profileMenu.contains(target) || (profileMenuButton && profileMenuButton.contains(target))) return;
+    closeProfileMenu();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && profileMenu && !profileMenu.hidden) {
+      closeProfileMenu();
+      return;
+    }
+    if (e.key === 'Escape' && authBackdrop && authBackdrop.classList.contains('is-open')) {
+      closeAuthModal();
+      return;
+    }
+    trapModalTab(e);
+  });
+
+  storeAuth(false);
+  setAuthState('unauthenticated', { persist: false });
+</script>
 </body>
 </html>
+
+

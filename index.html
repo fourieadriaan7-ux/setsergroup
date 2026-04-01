@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setser Group | Leadership, Teams, and Productive Organizations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand:#103232;--brand-dark:#091f1f;--accent:#c6a676;--bg:#f5efe6;--surface:#fffdf9;--border:rgba(16,50,50,.12);--text:#173333;--muted:rgba(23,51,51,.72);--light:rgba(255,255,255,.78);--shadow:0 24px 60px rgba(9,29,29,.16);--max:1180px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Plus Jakarta Sans",sans-serif;background:radial-gradient(circle at top left,rgba(198,166,118,.2),transparent 26%),radial-gradient(circle at top right,rgba(16,50,50,.08),transparent 28%),var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .tag,.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .tag::before,.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:999px}
+    .tag{color:var(--brand)}.eyebrow{color:rgba(255,255,255,.72)}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(245,239,230,.88);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.25s ease}
+    .nav.scrolled{border-color:rgba(16,50,50,.08);box-shadow:0 12px 30px rgba(16,50,50,.08)}
+    .nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:50px;height:50px;border-radius:18px;object-fit:cover;background:var(--brand);box-shadow:0 14px 28px rgba(16,50,50,.18)}
+    .brand-copy{display:flex;flex-direction:column}
+    .brand-kicker{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(23,51,51,.58)}
+    .brand-name{font-family:"Sora",sans-serif;font-size:18px;font-weight:700;letter-spacing:-.03em;color:var(--brand)}
+    .nav-links{display:flex;align-items:center;gap:22px}
+    .nav-links a{font-size:14px;font-weight:600;color:rgba(23,51,51,.8)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:999px;font-size:14px;font-weight:700;transition:.2s ease}
+    .nav-cta{background:rgba(255,255,255,.86);border:1px solid rgba(16,50,50,.14);color:var(--brand)}
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px)}
+    .hero{padding:40px 0 22px}
+    .hero-shell{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(300px,.86fr);gap:28px;padding:40px;border-radius:34px;background:radial-gradient(circle at 82% 18%,rgba(198,166,118,.28),transparent 26%),linear-gradient(135deg,rgba(16,50,50,.98),rgba(9,31,31,.94));box-shadow:var(--shadow)}
+    .hero h1{margin-top:22px;font-family:"Sora",sans-serif;font-size:clamp(42px,8vw,88px);line-height:.97;letter-spacing:-.06em;color:#fff}
+    .hero-word{display:block;min-height:1.18em;color:#d7b67e}
+    .cursor{display:inline-block;margin-left:2px;animation:blink .8s linear infinite}
+    @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+    .hero p{margin-top:24px;max-width:700px;font-size:18px;line-height:1.85;color:var(--light)}
+    .status{margin-top:18px;display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.84)}
+    .status::before{content:"";width:10px;height:10px;border-radius:50%;background:#d7b67e;box-shadow:0 0 0 6px rgba(215,182,126,.16)}
+    .actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px}
+    .btn-primary{background:#fff;color:var(--brand)}
+    .btn-secondary{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);color:#fff}
+    .hero-side{display:grid;gap:14px}
+    .panel,.note,.card,.aside,.faq-item,.footer-box{border:1px solid var(--border);border-radius:28px;background:rgba(255,253,249,.86);box-shadow:0 12px 28px rgba(16,50,50,.06)}
+    .panel,.note{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);backdrop-filter:blur(10px);color:#fff}
+    .panel,.note,.card,.aside,.focus,.footer-box{padding:26px}
+    .panel-kicker{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.52)}
+    .panel h2{margin-top:12px;font-family:"Sora",sans-serif;font-size:28px;line-height:1.08;letter-spacing:-.03em}
+    .panel p,.note{margin-top:12px;font-size:15px;line-height:1.75;color:rgba(255,255,255,.78)}
+    .panel ul{margin-top:18px;display:grid;gap:12px;list-style:none}
+    .panel li{padding:12px 14px;border-radius:18px;background:rgba(255,255,255,.06);font-size:14px;line-height:1.6;color:rgba(255,255,255,.82)}
+    .note strong,.quote strong{color:#fff}
+    section{padding:80px 0}
+    .head{display:grid;gap:16px;margin-bottom:30px}
+    .head h2,.card h3,.aside h3,.focus h3,.footer-title{font-family:"Sora",sans-serif;line-height:1.06;letter-spacing:-.04em}
+    .head h2{font-size:clamp(30px,4vw,54px)}
+    .head p,.card p,.aside p,.focus p,.faq-answer,.footer-copy,.footer-note{font-size:16px;line-height:1.8;color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .service{position:relative;overflow:hidden;min-height:410px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;border-radius:28px;background:var(--brand);box-shadow:var(--shadow);isolation:isolate}
+    .service::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,16,16,.06),rgba(8,24,24,.92)),var(--img) center/cover no-repeat;z-index:-2;transition:transform .4s ease}
+    .service::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(16,50,50,.36) 54%,rgba(9,31,31,.96) 100%);z-index:-1}
+    .service:hover::before{transform:scale(1.06)}
+    .service-kicker{display:inline-flex;align-self:flex-start;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.14);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.88)}
+    .service h3{margin-top:16px;font-size:28px;color:#fff}
+    .service p{margin-top:12px;font-size:15px;line-height:1.72;color:rgba(255,255,255,.8)}
+    .service .soon{margin-top:16px;font-size:13px;font-weight:700;color:#d7b67e}
+    .approach{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(280px,.86fr);gap:20px}
+    .stack{display:grid;gap:18px}
+    .count{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .card h3,.aside h3,.focus h3{margin-top:18px;font-size:30px;color:var(--brand)}
+    .aside{background:radial-gradient(circle at top right,rgba(198,166,118,.18),transparent 30%),linear-gradient(180deg,rgba(220,233,229,.9),rgba(255,253,249,.96))}
+    .aside ul{margin-top:18px;display:grid;gap:12px;list-style:none}
+    .aside li{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.76);font-size:14px;font-weight:600;line-height:1.6;color:var(--brand)}
+    .focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .chip,.footer-chip{display:inline-flex;align-items:center;padding:12px 16px;border-radius:999px;font-size:14px;font-weight:700}
+    .chip{background:rgba(16,50,50,.08);color:var(--brand)}
+    .quote{margin-top:22px;padding:18px 20px;border-radius:22px;background:var(--brand);font-size:15px;line-height:1.75;color:rgba(255,255,255,.84)}
+    .faq-list{display:grid;gap:14px}
+    .faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;border:none;background:transparent;text-align:left;cursor:pointer;color:var(--brand)}
+    .faq-btn span:first-child{font-size:18px;font-weight:700;line-height:1.45}
+    .icon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(16,50,50,.08);font-size:18px;font-weight:700;transition:.2s ease}
+    .faq-item.open .icon{transform:rotate(45deg);background:rgba(16,50,50,.14)}
+    .faq-wrap{height:0;overflow:hidden;transition:height .28s ease}
+    .faq-answer{padding:0 24px 24px}
+    footer{padding:0 0 40px}
+    .footer-box{background:radial-gradient(circle at top right,rgba(198,166,118,.18),transparent 26%),linear-gradient(135deg,rgba(16,50,50,.98),rgba(9,31,31,.94));border-color:rgba(255,255,255,.08);box-shadow:var(--shadow)}
+    .footer-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
+    .footer-title{margin-top:18px;font-size:clamp(30px,4vw,52px);color:#fff}
+    .footer-copy,.footer-note{margin-top:14px;color:rgba(255,255,255,.74);max-width:560px}
+    .footer-meta{display:grid;gap:14px}
+    .footer-chip{width:fit-content;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.84)}
+    .footer-bottom{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.56)}
+    [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    [data-reveal].show{opacity:1;transform:none}
+    @media (max-width:1080px){.hero-shell,.approach,.focus-grid,.footer-grid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:760px){.nav-links{display:none}.hero-shell{padding:24px;border-radius:28px}.services{grid-template-columns:1fr}.service{min-height:360px}.faq-btn{padding:20px}.faq-answer{padding:0 20px 20px}}
+    @media (max-width:560px){.wrap{width:min(var(--max),calc(100% - 28px))}.hero h1{font-size:42px}.actions{flex-direction:column}.btn,.nav-cta{width:100%}section{padding:70px 0}.card h3,.aside h3,.focus h3,.service h3{font-size:24px}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}[data-reveal]{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Setser Group homepage">
+        <img src="icons/sg-logo-mark.jpg" alt="Setser Group logo" />
+        <span class="brand-copy">
+          <span class="brand-kicker">Homepage release</span>
+          <span class="brand-name">Setser Group</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#focus">Focus</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="nav-cta" href="#services">Explore the 4 areas</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-shell">
+        <div data-reveal>
+          <span class="eyebrow">Setser Group</span>
+          <h1>Become A<span class="hero-word"><span id="heroWord">Leader</span><span class="cursor">|</span></span></h1>
+          <p>Setser Group is a North Carolina-based consulting firm led by Bryan Setser, helping leaders and organizations navigate learning, work, AI, and human-centered change with sharper strategy, stronger teams, and practical implementation.</p>
+          <div class="status">Only the homepage is live right now while deeper service pages are being shaped.</div>
+          <div class="actions">
+            <a class="btn btn-primary" href="#services">See the service framing</a>
+            <a class="btn btn-secondary" href="#approach">See how the work moves</a>
+          </div>
+        </div>
+        <aside class="hero-side" data-reveal>
+          <div class="panel">
+            <p class="panel-kicker">Current positioning</p>
+            <h2>Leadership, teaming, and productive organizations.</h2>
+            <p>This temporary release keeps the message simple: four clear outcomes up top, one active homepage, and a clean foundation for the fuller Setser Group story.</p>
+            <ul>
+              <li>Strategic advisory that turns ambiguity into direction.</li>
+              <li>Design labs that move ideas into tangible operating models.</li>
+              <li>Implementation support that helps work stick in real environments.</li>
+            </ul>
+          </div>
+          <div class="note"><strong>Focus areas for now:</strong> AI integration, human literacy, leadership development, educational innovation, and the systems that help teams do their best work together.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <span class="tag">Top services</span>
+          <h2>The homepage now frames Setser Group around four simple outcomes.</h2>
+          <p>Bryan's four service directions now lead the experience. The detailed inner pages are intentionally disabled for the moment, so this version keeps the focus on the homepage while content direction catches up.</p>
+        </div>
+        <div class="services">
+          <article class="service" data-reveal style="--img:url('images/sg-service-cert.png')">
+            <span class="service-kicker">Leadership foundations</span>
+            <h3>Become a Leader</h3>
+            <p>Clarify direction, sharpen decision-making, and build the posture needed to lead meaningful change.</p>
+            <p class="soon">Detailed page coming soon</p>
+          </article>
+          <article class="service" data-reveal style="--img:url('images/sg-service-prep.png')">
+            <span class="service-kicker">Coaching and growth</span>
+            <h3>Become a Better Leader</h3>
+            <p>Develop stronger habits, better communication, and more intentional leadership in the moments that matter most.</p>
+            <p class="soon">Detailed page coming soon</p>
+          </article>
+          <article class="service" data-reveal style="--img:url('images/sg-service-coaching.png')">
+            <span class="service-kicker">Culture and teaming</span>
+            <h3>Become a Great Team</h3>
+            <p>Strengthen collaboration, trust, and accountability so teams move together instead of working past one another.</p>
+            <p class="soon">Detailed page coming soon</p>
+          </article>
+          <article class="service" data-reveal style="--img:url('images/sg-service-learning.png')">
+            <span class="service-kicker">Operating effectiveness</span>
+            <h3>Become a Productive Organization</h3>
+            <p>Design clearer systems, align execution, and create operating rhythms that help good strategy turn into real progress.</p>
+            <p class="soon">Detailed page coming soon</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <span class="tag">Approach</span>
+          <h2>The work is built to move from direction to design to implementation.</h2>
+          <p>Setser Group is not just about ideas. The shape of the work suggests a practical rhythm: understand the challenge, design a better path, and help teams carry it into daily practice.</p>
+        </div>
+        <div class="approach">
+          <div class="stack">
+            <article class="card" data-reveal><span class="count">01</span><h3>Strategic advisory</h3><p>Make sense of the moment, name the real challenge, and align leaders around what matters most before energy gets scattered.</p></article>
+            <article class="card" data-reveal><span class="count">02</span><h3>Design labs</h3><p>Turn strategy into something people can work with: clearer experiences, better structures, and operating models that feel intentional instead of theoretical.</p></article>
+            <article class="card" data-reveal><span class="count">03</span><h3>Implementation support</h3><p>Stay close enough to the work that momentum keeps building, teams stay supported, and the change becomes usable in the real world.</p></article>
+          </div>
+          <aside class="aside" data-reveal>
+            <h3>Homepage first. Inner pages later.</h3>
+            <p>This temporary release intentionally disables the old inner pages. It gives you one strong, on-brand entry point right now without exposing outdated service detail pages underneath.</p>
+            <ul>
+              <li>The homepage is the only active destination.</li>
+              <li>Old routes now redirect back here.</li>
+              <li>The structure is ready for fuller content once direction lands.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="wrap focus-grid">
+        <article class="focus" data-reveal>
+          <span class="tag">Focus areas</span>
+          <h3>Where the Setser Group story can grow next.</h3>
+          <p>Based on the guidance you shared, the broader Setser Group frame points toward leadership, learning, AI integration, and practical change work that helps organizations move with more clarity and humanity.</p>
+          <div class="chips">
+            <span class="chip">Leadership development</span><span class="chip">AI integration</span><span class="chip">Human literacy</span><span class="chip">Educational innovation</span><span class="chip">Team effectiveness</span><span class="chip">Organizational design</span>
+          </div>
+        </article>
+        <article class="focus" data-reveal>
+          <span class="tag">Working style</span>
+          <h3>Head, heart, habits, and work that actually lands.</h3>
+          <p>The site can keep evolving around a consulting voice that feels strategic but grounded: thoughtful about systems, practical about implementation, and serious about how people experience change.</p>
+          <div class="quote"><strong>Temporary positioning note:</strong> this homepage is deliberately lean so the brand, color, logo, and four service outcomes are clean right away without overcommitting the deeper story before you get more direction.</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <span class="tag">FAQ</span>
+          <h2>A few quick answers about this temporary release.</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item open" data-reveal>
+            <button class="faq-btn" type="button" aria-expanded="true"><span>What is live on the site right now?</span><span class="icon" aria-hidden="true">+</span></button>
+            <div class="faq-wrap" style="height:auto"><div class="faq-answer">Only the homepage is active. The previous inner pages have been disabled for now and redirect back to the homepage so visitors stay inside the new Setser Group framing.</div></div>
+          </article>
+          <article class="faq-item" data-reveal>
+            <button class="faq-btn" type="button" aria-expanded="false"><span>What do the four service cards represent?</span><span class="icon" aria-hidden="true">+</span></button>
+            <div class="faq-wrap"><div class="faq-answer">They are the current homepage framing from Bryan's note: become a leader, become a better leader, become a great team, and become a productive organization. They set the direction without forcing unfinished inner pages live too early.</div></div>
+          </article>
+          <article class="faq-item" data-reveal>
+            <button class="faq-btn" type="button" aria-expanded="false"><span>Can the old inner pages come back later?</span><span class="icon" aria-hidden="true">+</span></button>
+            <div class="faq-wrap"><div class="faq-answer">Yes. The redirect setup is temporary and easy to reverse. Once you get the next round of content direction, we can rebuild or repurpose those routes without losing this homepage work.</div></div>
+          </article>
+          <article class="faq-item" data-reveal>
+            <button class="faq-btn" type="button" aria-expanded="false"><span>Why does the site feel simpler now?</span><span class="icon" aria-hidden="true">+</span></button>
+            <div class="faq-wrap"><div class="faq-answer">Because the goal for this pass is clarity. The site now leads with the Setser Group brand, the new logo, the correct primary color, and one focused homepage instead of exposing legacy messaging that still needs to be rewritten.</div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-box" data-reveal>
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="#top">
+              <img src="icons/sg-logo-mark.jpg" alt="Setser Group logo" />
+              <span class="brand-copy"><span class="brand-kicker" style="color:rgba(255,255,255,.54)">Temporary release</span><span class="brand-name" style="color:#fff">Setser Group</span></span>
+            </a>
+            <h2 class="footer-title">One clean homepage now, room for the full story next.</h2>
+            <p class="footer-copy">The site now uses the <code>sg-</code> asset prefix, the main brand color is <code>#103232</code>, and the legacy inner pages are currently disabled so the homepage can lead with confidence.</p>
+          </div>
+          <div class="footer-meta">
+            <span class="footer-chip">Homepage only</span>
+            <span class="footer-chip">Old routes redirect here</span>
+            <span class="footer-chip">Ready for GitHub and Vercel</span>
+            <p class="footer-note">More detailed service pages, contact flows, and deeper content can be layered back in once you get the next round of direction.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">Copyright &copy; <span id="year"></span> Setser Group. Temporary homepage release.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav=document.getElementById("nav"),year=document.getElementById("year"),heroWord=document.getElementById("heroWord"),words=["Leader","Better Leader"],reveals=document.querySelectorAll("[data-reveal]");
+    if(year)year.textContent=new Date().getFullYear();
+    const syncNav=()=>nav&&nav.classList.toggle("scrolled",window.scrollY>8);window.addEventListener("scroll",syncNav,{passive:true});syncNav();
+    if(heroWord&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){let i=0,c=words[0].length,del=false;setInterval(()=>{const word=words[i];if(!del){c+=1;heroWord.textContent=word.slice(0,c);if(c>=word.length)del=true;return}c-=1;heroWord.textContent=word.slice(0,Math.max(c,0));if(c<=0){i=(i+1)%words.length;del=false}},130)}
+    if("IntersectionObserver" in window&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add("show");io.unobserve(e.target)}),{threshold:.12});reveals.forEach(el=>io.observe(el))}else{reveals.forEach(el=>el.classList.add("show"))}
+    const items=document.querySelectorAll(".faq-item");items.forEach(item=>{const btn=item.querySelector(".faq-btn"),wrap=item.querySelector(".faq-wrap"),answer=item.querySelector(".faq-answer");if(item.classList.contains("open"))wrap.style.height=answer.offsetHeight+"px";btn.addEventListener("click",()=>{const open=item.classList.contains("open");items.forEach(node=>{node.classList.remove("open");node.querySelector(".faq-btn").setAttribute("aria-expanded","false");node.querySelector(".faq-wrap").style.height="0px"});if(open)return;item.classList.add("open");btn.setAttribute("aria-expanded","true");wrap.style.height=answer.offsetHeight+"px"})});window.addEventListener("resize",()=>{const open=document.querySelector(".faq-item.open");if(!open)return;open.querySelector(".faq-wrap").style.height=open.querySelector(".faq-answer").offsetHeight+"px"});
+  </script>
+</body>
+</html>

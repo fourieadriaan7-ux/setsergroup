@@ -220,6 +220,8 @@
     .mob-link:hover { background: var(--c-bg-tinted); }
     .mob-foot { padding: 16px; border-top: 1px solid var(--c-border-lt); display: flex; flex-direction: column; gap: 8px; }
     .mob-section-label { font-size: 11px; font-weight: 600; color: var(--c-subtle); text-transform: uppercase; letter-spacing: .08em; padding: 8px 14px 4px; }
+    .is-disabled-link { cursor: default; pointer-events: none; }
+    .mob-link.is-disabled-link:hover { background: transparent; }
 
     /* ── HERO ──────────────────────────────────────────────── */
     .hero {
@@ -257,6 +259,11 @@
       transition: background-size .6s cubic-bezier(.25,.46,.45,.94); min-height: 0;
     }
     .service-card:hover .card-image-area { background-size: 110%; }
+    .service-card.is-disabled-link { cursor: default; }
+    .service-card.is-disabled-link:hover { box-shadow: var(--sh-card); transform: none; background: var(--c-bg); }
+    .service-card.is-disabled-link:hover .card-title { color: var(--c-muted); }
+    .service-card.is-disabled-link:hover .card-badge { background: var(--c-brand); color: #fff; }
+    .service-card.is-disabled-link:hover .card-image-area { background-size: 100%; }
     .img-coaching { background-image: url('images/sg-service-coaching.png'); }
     .img-learning  { background-image: url('images/sg-service-learning.png'); }
     .img-cert      { background-image: url('images/sg-service-cert.png'); }
@@ -459,6 +466,7 @@
     .footer-links-grid.footer-links-single { grid-template-columns: 1fr; gap: 14px; }
     .footer-links-grid a { font-size: 14px; font-weight: 400; color: rgba(255,255,255,.6); transition: color var(--t); }
     .footer-links-grid a:hover { color: #fff; }
+    .footer-links-grid a.is-disabled-link:hover { color: rgba(255,255,255,.6); }
     .footer-contact-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
     .footer-contact-item { font-size: 14px; font-weight: 400; color: rgba(255,255,255,.6); line-height: 1.6; }
     .footer-contact-item strong { color: rgba(255,255,255,.85); font-weight: 600; margin-right: 2px; }
@@ -810,15 +818,15 @@
   </div>
   <div class="mob-body">
     <p class="mob-section-label">Services</p>
-    <a class="mob-link" href="certification.html">Become a Leader</a>
-    <a class="mob-link" href="test-prep.html">Become a Better Leader</a>
-    <a class="mob-link" href="coaching.html">Become a Great Team</a>
-    <a class="mob-link" href="learning.html">Become a Productive Organization</a>
+    <a class="mob-link is-disabled-link" aria-disabled="true">Become a Leader</a>
+    <a class="mob-link is-disabled-link" aria-disabled="true">Become a Better Leader</a>
+    <a class="mob-link is-disabled-link" aria-disabled="true">Become a Great Team</a>
+    <a class="mob-link is-disabled-link" aria-disabled="true">Become a Productive Organization</a>
     <p class="mob-section-label" style="margin-top:8px;">Company</p>
-                    <a class="mob-link" href="about.html">About</a>
-                    <a class="mob-link" href="for-organizations.html">For Organizations</a>
-                    <a class="mob-link" href="for-individuals.html">For Individuals</a>
-                    <a class="mob-link" href="pricing.html">Pricing</a>
+                    <a class="mob-link is-disabled-link" aria-disabled="true">About</a>
+                    <a class="mob-link is-disabled-link" aria-disabled="true">For Organizations</a>
+                    <a class="mob-link is-disabled-link" aria-disabled="true">For Individuals</a>
+                    <a class="mob-link is-disabled-link" aria-disabled="true">Pricing</a>
   </div>
   <div class="mob-foot">
     <a class="btn-signup" href="#" style="justify-content:center;font-size:16px;padding:13px 22px;">Register</a>
@@ -928,22 +936,22 @@
 <section class="services-section" id="services">
   <p class="services-label reveal">How can we help you?</p>
   <div class="services-grid">
-    <a class="service-card reveal reveal-d1" href="certification.html">
+    <a class="service-card reveal reveal-d1 is-disabled-link" aria-disabled="true">
       <p class="card-title">Become a Leader</p>
       <div class="card-image-area img-cert" role="img" aria-label="Become a Leader"></div>
       <span class="card-badge">Leadership foundations</span>
     </a>
-    <a class="service-card reveal reveal-d2" href="test-prep.html">
+    <a class="service-card reveal reveal-d2 is-disabled-link" aria-disabled="true">
       <p class="card-title">Become a Better Leader</p>
       <div class="card-image-area img-prep" role="img" aria-label="Become a Better Leader"></div>
       <span class="card-badge">Coaching &amp; growth</span>
     </a>
-    <a class="service-card reveal reveal-d3" href="coaching.html">
+    <a class="service-card reveal reveal-d3 is-disabled-link" aria-disabled="true">
       <p class="card-title">Become a Great Team</p>
       <div class="card-image-area img-coaching" role="img" aria-label="Become a Great Team"></div>
       <span class="card-badge">Culture &amp; collaboration</span>
     </a>
-    <a class="service-card reveal reveal-d4" href="learning.html">
+    <a class="service-card reveal reveal-d4 is-disabled-link" aria-disabled="true">
       <p class="card-title">Become a Productive Organization</p>
       <div class="card-image-area img-learning" role="img" aria-label="Become a Productive Organization"></div>
       <span class="card-badge">Systems &amp; execution</span>
@@ -1205,19 +1213,19 @@
     <div class="footer-col">
       <h4 class="footer-col-heading">Services</h4>
       <div class="footer-links-grid footer-links-single">
-        <a href="certification.html">Become a Leader</a>
-        <a href="test-prep.html">Become a Better Leader</a>
-        <a href="coaching.html">Become a Great Team</a>
-        <a href="learning.html">Become a Productive Organization</a>
+        <a class="is-disabled-link" aria-disabled="true">Become a Leader</a>
+        <a class="is-disabled-link" aria-disabled="true">Become a Better Leader</a>
+        <a class="is-disabled-link" aria-disabled="true">Become a Great Team</a>
+        <a class="is-disabled-link" aria-disabled="true">Become a Productive Organization</a>
       </div>
     </div>
     <div class="footer-col">
       <h4 class="footer-col-heading">Company</h4>
       <div class="footer-links-grid footer-links-single">
-                        <a href="about.html">About</a>
-                        <a href="for-organizations.html">For Organizations</a>
-                        <a href="for-individuals.html">For Individuals</a>
-                        <a href="pricing.html">Pricing</a>
+                        <a class="is-disabled-link" aria-disabled="true">About</a>
+                        <a class="is-disabled-link" aria-disabled="true">For Organizations</a>
+                        <a class="is-disabled-link" aria-disabled="true">For Individuals</a>
+                        <a class="is-disabled-link" aria-disabled="true">Pricing</a>
       </div>
     </div>
     <div class="footer-col">

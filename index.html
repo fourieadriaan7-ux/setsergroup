@@ -220,7 +220,7 @@
     .mob-link:hover { background: var(--c-bg-tinted); }
     .mob-foot { padding: 16px; border-top: 1px solid var(--c-border-lt); display: flex; flex-direction: column; gap: 8px; }
     .mob-section-label { font-size: 11px; font-weight: 600; color: var(--c-subtle); text-transform: uppercase; letter-spacing: .08em; padding: 8px 14px 4px; }
-    .is-disabled-link { cursor: default; pointer-events: none; }
+    .is-disabled-link { cursor: default; }
     .mob-link.is-disabled-link:hover { background: transparent; }
 
     /* ── HERO ──────────────────────────────────────────────── */
@@ -259,11 +259,7 @@
       transition: background-size .6s cubic-bezier(.25,.46,.45,.94); min-height: 0;
     }
     .service-card:hover .card-image-area { background-size: 110%; }
-    .service-card.is-disabled-link { cursor: default; }
-    .service-card.is-disabled-link:hover { box-shadow: var(--sh-card); transform: none; background: var(--c-bg); }
-    .service-card.is-disabled-link:hover .card-title { color: var(--c-muted); }
-    .service-card.is-disabled-link:hover .card-badge { background: var(--c-brand); color: #fff; }
-    .service-card.is-disabled-link:hover .card-image-area { background-size: 100%; }
+    .service-card.is-disabled-link { cursor: pointer; }
     .img-coaching { background-image: url('images/sg-service-coaching.png'); }
     .img-learning  { background-image: url('images/sg-service-learning.png'); }
     .img-cert      { background-image: url('images/sg-service-cert.png'); }
